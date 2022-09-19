@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>3</defaultcontrol>
+
+    <controls>
+        <include>Background</include>
+
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="slide" start="620,0" end="0,0" time="322" tween="sine" easing="inout" />
+                <effect type="fade" start="0" end="100" time="240" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="slide" start="0,0" end="620,0" time="322" tween="sine" easing="inout" />
+                <effect type="fade" start="100" end="0" time="240" />
+            </animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="ControlGroup(5).HasFocus">Conditional</animation>
+            <control type="grouplist" id="3">
+                <left>120</left>
+                <top>0</top>
+                <width>400</width>
+                <bottom>0</bottom>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <itemgap>0</itemgap>
+                <onleft>back</onleft>
+                <ondown>20</ondown>
+                <onright>5</onright>
+            </control>
+
+            <control type="button" id="20">
+                <left>120</left>
+                <bottom>0</bottom>
+                <height>80</height>
+                <include>DefaultButton</include>
+                <aligny>top</aligny>
+                <onup>SetFocus(3)</onup>
+                <onup>Control.SetFocus(3,4)</onup>
+                <ondown>3</ondown>
+                <onclick>SettingsLevelChange</onclick>
+            </control>
+
+            <control type="button" id="10">
+                <include>DefaultButton</include>
+            </control>
+
+            <control type="grouplist" id="5">
+                <top>0</top>
+                <bottom>0</bottom>
+                <left>620</left>
+                <width>1700</width>
+
+                <usecontrolcoords>false</usecontrolcoords>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <itemgap>0</itemgap>
+                <onback>3</onback>
+                <onleft>3</onleft>
+            </control>
+
+            <control type="button" id="7">
+                <width>1600</width>
+                <include>DefaultButton</include>
+            </control>
+            <control type="radiobutton" id="8">
+                <include>DefaultButton</include>
+            </control>
+            <control type="spincontrolex" id="9">
+                <include>DefaultButton</include>
+            </control>
+            <control type="edit" id="12">
+                <include>DefaultButton</include>
+            </control>
+            <control type="label" id="14">
+                <height>72</height>
+                <textcolor>Primary</textcolor>
+                <font>Font48</font>
+                <textoffsetx>0</textoffsetx>
+                <align>left</align>
+                <aligny>center</aligny>
+            </control>
+
+        </control>
+
+        <control type="group">
+            <animation effect="fade" start="100" end="0" time="200" tween="sine" easing="inout" condition="ControlGroup(5).HasFocus">Conditional</animation>
+            <include>Foreground</include>
+        </control>
+    </controls>
+</window>

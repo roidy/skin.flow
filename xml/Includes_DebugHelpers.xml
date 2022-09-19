@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="DebugBlock">
+        <control type="image">
+            <left>$PARAM[Left]</left>
+            <top>$PARAM[Top]</top>
+            <width>$PARAM[Width]</width>
+            <height>$PARAM[Height]</height>
+            <texture colordiffuse="$PARAM[Color]">general/White.png</texture>
+        </control>
+    </include>
+    <include name="DebugBlockNoSize">
+        <control type="image">
+            <texture colordiffuse="$PARAM[Color]">general/White.png</texture>
+        </control>
+    </include>
+    <include name="VerticalLine">
+        <control type="image">
+            <left>$PARAM[value]</left>
+            <top>0</top>
+            <width>1</width>
+            <height>2160</height>
+            <texture colordiffuse="ffff0000">general/White.png</texture>
+        </control>
+    </include>
+    <include name="HorizontalLine">
+        <control type="image">
+            <top>$PARAM[value]</top>
+            <left>0</left>
+            <width>3820</width>
+            <height>1</height>
+            <texture colordiffuse="ffff0000">general/White.png</texture>
+        </control>
+    </include>
+    <include name="DebugWindowLabel">
+        <control type="label">
+            <width>1000</width>
+            <height>16</height>
+            <textcolor>ffff9030</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <font>DebugFont</font>
+            <align>right</align>
+            <label>[B]$PARAM[name][/B]</label>
+            <visible>Window.IsVisible($PARAM[name])</visible>
+        </control>
+    </include>
+    <include name="DebugSystemLabel">
+        <control type="label">
+            <width>1000</width>
+            <height>16</height>
+            <textcolor>ff20a0f0</textcolor>
+            <shadowcolor>FF000000</shadowcolor>
+            <font>DebugFont</font>
+            <align>right</align>
+            <label>[B]$PARAM[name][/B] [COLOR ff30f0ff]$PARAM[value][/COLOR]</label>
+        </control>
+    </include>
+
+    <include name="HomeDebugInfo">
+        <control type="grouplist">
+            <right>15</right>
+            <top>40</top>
+            <width>1000</width>
+            <height>450</height>
+            <itemgap>12</itemgap>
+            <include content="DebugSystemLabel">
+                <param name="name" value="Current control:" />
+                <param name="value" value="$INFO[System.CurrentControl]$INFO[System.CurrentControlID, (ID=,)]" />
+            </include>
+
+            <include content="DebugSystemLabel">
+                <param name="name" value="Hub path:" />
+                <param name="value" value="$INFO[ListItem.Property(list)]" />
+            </include>
+
+            <include content="DebugSystemLabel">
+                <param name="name" value="ListItem.FolderPath:" />
+                <param name="value" value="$INFO[ListItem.FolderPath]" />
+            </include>
+
+            <include content="DebugSystemLabel">
+                <param name="name" value="ListItem.DBType:" />
+                <param name="value" value="$INFO[ListItem.DBType]" />
+            </include>
+
+            <include content="DebugSystemLabel">
+                <param name="name" value="ListItem.Art(fanart):" />
+                <param name="value" value="$VAR[Fanart]" />
+            </include>
+            <include content="DebugSystemLabel">
+                <param name="name" value="ListItem.Art(poster):" />
+                <param name="value" value="$INFO[ListItem.Art(poster)]" />
+            </include>
+        </control>
+    </include>
+</includes>

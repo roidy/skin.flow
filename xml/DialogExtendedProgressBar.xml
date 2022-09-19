@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <controls>
+        <control type="group">
+            <incldue>WindowFadeAnimation</incldue>
+            <top>40</top>
+            <left>140</left>
+            <height>96</height>
+            <width>600</width>
+            
+            <control type="image">
+                <top>-30</top>
+                <left>-30</left>
+                <width>660</width>
+                <height>156</height>
+                <colordiffuse>d0161616</colordiffuse>
+                <texture border="32">masks/NotificationMask.png</texture>
+            </control>
+
+            <control type="image">
+                <top>0</top>
+                <bottom>0</bottom>
+                <width>3</width>
+                <texture colordiffuse="Primary">general/White.png</texture>
+            </control>
+
+            <control type="label" id="30">
+                <top>4</top>
+                <left>16</left>
+                <right>0</right>
+                <height>34</height>
+                <textcolor>Bright</textcolor>
+                <font>Font30</font>
+                <align>top</align>
+            </control>
+            <control type="label" id="31">
+                <bottom>24</bottom>
+                <left>16</left>
+                <right>0</right>
+                <height>34</height>
+                <textcolor>Grey</textcolor>
+                <font>Font24</font>
+                <align>top</align>
+            </control>
+
+            <control type="progress" id="32">
+                <left>16</left>
+                <bottom>8</bottom>
+                <height>8</height>
+                <texturebg colordiffuse="Grey">controls/ProgressBkg.png</texturebg>
+                <midtexture colordiffuse="Bright">general/White.png</midtexture>
+            </control>
+
+        </control>
+    </controls>
+</window>

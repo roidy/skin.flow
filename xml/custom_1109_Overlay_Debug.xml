@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1109">
+    <zorder>100</zorder>
+    <!-- <visible>!Window.IsVisible(startup)</visible> -->
+    <controls>
+
+        <!-- Margins -->
+        <control type="group">
+            <visible>true</visible>
+            <!-- <include content="VerticalLine">
+                <param name="value" value="80" />
+            </include> -->
+
+            <include content="VerticalLine">
+                <param name="value" value="120" />
+            </include>
+
+            <!-- <include content="VerticalLine">
+                <param name="value" value="500" />
+            </include> -->
+            
+            <include content="VerticalLine">
+                <param name="value" value="620" />
+            </include>
+
+            <include content="VerticalLine">
+                <param name="value" value="740" />
+            </include>
+
+            <!-- <include content="VerticalLine">
+                <param name="value" value="872" />
+            </include> -->
+
+            <!-- <include content="VerticalLine">
+                <param name="value" value="3652" />
+            </include> -->
+        </control>
+
+
+        <!-- Window/Dialog  -->
+        <control type="grouplist">
+            <right>15</right>
+            <top>15</top>
+            <width>1000</width>
+            <height>450</height>
+            <itemgap>12</itemgap>
+            <!-- Window labels -->
+            <include content="DebugWindowLabel">
+                <param name="name" value="AddonBrowser.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogAccessPoints.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogAddonInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogAddonSettings.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogBusy.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogButtonMenu.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogConfirm.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogContextMenu.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogExtendedProgressBar.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogFavourites.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogFullScreenInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogGameControllers.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogKeyboard.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogMediaSource.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogMusicInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogNotification.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogNumeric.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogPictureInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogPlayerProcessInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSeekBar.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSelect.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSettings.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSlider.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSubMenu.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogSubtitles.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogTextViewer.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogVideoInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="DialogVolumeBar.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="EventLog.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="FileBrowser.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="FileManager.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="GameOSD.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="Home.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="LoginScreen.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MusicOSD.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MusicVisualisation.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyMusicNav.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyMusicPlaylistEditor.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyPics.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyPlaylist.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyPrograms.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyVideoNav.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="MyWeather.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="Pointer.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="Settings.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SettingsCategory.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SettingsProfile.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SettingsScreenCalibration.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SettingsSystemInfo.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SkinSettings.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SlideShow.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SmartPlaylistEditor.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="SmartPlaylistRule.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="VideoFullScreen.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="VideoOSD.xml" />
+            </include>
+            <include content="DebugWindowLabel">
+                <param name="name" value="VideoOSDBookmarks.xml" />
+            </include>
+
+            <include content="DebugSystemLabel">
+                <param name="name" value="Current control:" />
+                <param name="value" value="$INFO[System.CurrentControl]$INFO[System.CurrentControlID, (ID=,)]" />
+            </include>
+            <!-- <include content="DebugSystemLabel">
+                <param name="name" value="Folder name:" />
+                <param name="value" value="$INFO[Container.FolderName]" />
+            </include> -->
+            <!-- <include content="DebugSystemLabel">
+                <param name="name" value="ListItem.FolderPath:" />
+                <param name="value" value="$INFO[Container(6001).ListItem.FolderPath]" />
+            </include> -->
+            <!-- <include content="DebugSystemLabel">
+                <param name="name" value="Container content:" />
+                <param name="value" value="$INFO[Container.Content]" />
+            </include> -->
+            <!-- <include content="DebugSystemLabel">
+                <param name="name" value="DBType:" />
+                <param name="value" value="$INFO[Container(6001).ListItem.DBType]" />
+            </include> -->
+        </control>
+    </controls>
+</window>

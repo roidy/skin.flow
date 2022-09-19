@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="WindowFadeAnimation">
+        <animation type="WindowOpen" reversible="false">
+            <effect type="fade" start="0" end="100" time="240" />
+        </animation>
+        <animation type="WindowClose" reversible="false">
+            <effect type="fade" start="100" end="0" time="240" />
+        </animation>
+    </include>
+
+
+    <include name="CenterList72">
+        <animation effect="slide" start="0,0" end="0,504" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,468" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,432" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,392" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,360" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,288" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,252" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,180" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,10)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,144" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,11)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,12)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,72" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,13)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,36" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,14)">Conditional</animation>
+    </include>
+
+    <include name="CenterList104">
+        <animation effect="slide" start="0,0" end="0,416" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,364" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,312" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,260" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,208" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,156" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,104" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,52" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9)">Conditional</animation>
+    </include>
+
+    <include name="CenterList">
+        <animation effect="slide" start="0,0" end="0,432" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,396" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,360" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,288" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,252" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,180" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,144" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,10) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,72" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,11) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,36" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,12) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,13) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">Conditional</animation>
+  
+        <animation effect="slide" start="0,0" end="0,416" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,364" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,312" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,260" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,208" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,156" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,104" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,52" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">Conditional</animation>
+
+        <animation effect="slide" start="0,0" end="0,360" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,1) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,2) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,288" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,3) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,252" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,4) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,5) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,180" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,6) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0,144" time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,7) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0," time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,8) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+        <animation effect="slide" start="0,0" end="0," time="0" condition="Integer.IsEqual(Container($PARAM[id]).NumItems,9) + String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">Conditional</animation>
+    </include>
+
+</includes>

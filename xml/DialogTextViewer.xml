@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">1</defaultcontrol>
+
+    <controls>
+        <control type="group">
+            <left>0</left>
+            <width>3840</width>
+            <include>BlurredBackground</include>
+            <control type="label" id="1">
+                <left>100</left>
+                <right>100</right>
+                <top>300</top>
+                <height>50</height>
+                <align>center</align>
+                <font>Font_B140</font>
+                <textcolor>Grey</textcolor>
+            </control>
+            <control type="textbox" id="5">
+                <description>textarea</description>
+                <left>600</left>
+                <width>2640</width>
+                <top>460</top>
+                <height>950</height>
+                <font>PlotFont</font>
+                <monofont>font_Mono</monofont>
+                <textcolor>Grey</textcolor>
+                <pagecontrol>60</pagecontrol>
+            </control>
+            <control type="scrollbar" id="60">
+                <left>1198</left>
+                <top>0</top>
+                <width>10</width>
+                <height>1080</height>
+                <ondown>60</ondown>
+                <onup>60</onup>
+                <orientation>vertical</orientation>
+            </control>
+        </control>
+    </controls>
+</window>

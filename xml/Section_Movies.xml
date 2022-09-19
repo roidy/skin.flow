@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="MoviesSection">
+        <control type="group">
+            <visible>$EXP[isMoviesSection]</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="!Control.HasFocus(1)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="ControlGroup(1000).HasFocus">Conditional</animation>
+
+            <!-- Main hub -->
+            <control type="group">
+                <left>620</left>
+                <width>1800</width>
+                <control type="image">
+                    <visible>Container(1001).IsUpdating</visible>
+                    <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                    <width>120</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>spinner.apng</texture>
+                </control>
+
+                <control type="list" id="1001">
+                    <include content="CenterList72">
+                        <param name="id" value="1001" />
+                    </include>
+                    <top>0</top>
+                    <height>1080</height>
+                    <onleft>1</onleft>
+                    <include>MovieHubRight</include>
+                    <onclick>noop</onclick>
+                    <itemlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="1001" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="1001" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                    <content>
+                        <include>skinshortcuts-group-moviehub</include>
+                    </content>
+                </control>
+            </control>
+
+            <control type="grouplist" id="1000">
+                <visible>$EXP[isMoviesSection]</visible>
+                <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+                <top>0</top>
+                <left>1000</left>
+                <width>1920</width>
+                <height>1080</height>
+                <orientation>horizontal</orientation>
+                <itemgap>-1300</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <onleft>1</onleft>
+                <onright>info</onright>
+
+                <!-- Level 1 -->
+                <include>skinshortcuts-template-MoviesLevel1</include>
+
+                <!-- Level 2 -->
+                <control type="group">
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container(1022).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="1022">
+                        <top>72</top>
+                        <height>936</height>
+                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(1022).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(1022).IsUpdating">Conditional</animation>
+                        <include content="CenterList">
+                            <param name="id" value="1022" />
+                            <param name="hub" value="1001" />
+                            <param name="level" value="2" />
+                        </include>
+                        <preloaditems>2</preloaditems>
+                        <onclick>noop</onclick>
+                        <include>MovieLevel2Left</include>
+                        <onright>info</onright>
+
+                        <include content="listType">
+                            <param name="id" value="1022" />
+                            <param name="hub" value="1001" />
+                            <param name="level" value="2" />
+                            <param name="MainLabel" value="$VAR[MovieMainLabel]" />
+                            <param name="SubLabel" value="$VAR[MovieSubLabel]" />
+                        </include>
+
+                        <content target="videos" sortby="$VAR[MovieLevel2.sortMethod]" sortorder="$VAR[MovieLevel2.sortDirection]">$VAR[MovieLevel2Content]</content>
+                    </control>
+                </control>
+
+            </control>
+
+        </control>
+    </include>
+</includes>

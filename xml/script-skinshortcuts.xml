@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <!-- <backgroundcolor>$VAR[BackgroundColorVar]</backgroundcolor> -->
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;group=moviehub|tvshowhub|musichub|videohub|picturehub)</onunload>
+
+    <defaultcontrol always="true">211</defaultcontrol>
+
+    <controls>
+
+        <include>Background</include>
+        <include>Foreground</include>
+
+        <!-- <control type="label">
+            <top>0</top>
+            <height>50</height>
+            <label>$INFO[Container(211).ListItem.Property(level1.active)]</label>
+        </control> -->
+
+        <control type="group">
+            <animation effect="slide" start="0,0" end="-720,0" time="400" condition="ControlGroup(10200).HasFocus">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-1440,0" time="400" condition="ControlGroup(10300).HasFocus">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-2160,0" time="400" condition="ControlGroup(10400).HasFocus">Conditional</animation>
+
+            <control type="list" id="211">
+                <include content="CenterList72">
+                    <param name="id" value="211" />
+                </include>
+                <left>140</left>
+                <top>0</top>
+                <width>400</width>
+                <height>1080</height>
+                <onleft>800</onleft>
+                <onright>9300</onright>
+
+                <itemlayout width="400" height="72">
+                    <include content="ListItem">
+                        <param name="id" value="211" />
+                    </include>
+                </itemlayout>
+                <focusedlayout width="400" height="72">
+                    <include content="ListItem">
+                        <param name="id" value="211" />
+                        <param name="focused" value="true" />
+                    </include>
+                </focusedlayout>
+            </control>
+
+
+            <control type="grouplist" id="9200">
+                <visible>!Container(211).IsUpdating + Integer.IsGreater(Container(211).NumItems,0)</visible>
+                <include content="CenterList72">
+                    <param name="id" value="211" />
+                </include>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,1)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,2)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,3)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,4)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,5)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,6)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,7)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,8)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,9)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,10)">Conditional</animation>
+                <animation effect="slide" end="0,72" condition="Integer.IsGreater(Container(211).Position,11)">Conditional</animation>
+                <left>40</left>
+                <height>72</height>
+                <width>220</width>
+                <orientation>horizontal</orientation>
+                <itemgap>-8</itemgap>
+                <onleft>noop</onleft>
+                <onright>211</onright>
+
+                <control type="button" id="301" description="Add">
+                    <include>SmallIconButton</include>
+                    <label>&#xea11;</label>
+                </control>
+                <control type="button" id="302" description="Delete">
+                    <include>SmallIconButton</include>
+                    <label>&#xee57;</label>
+                </control>
+                <control type="button" id="800" description="Up/Down">
+                    <include>SmallIconButton</include>
+                    <label>&#xea74;</label>
+                    <onup>SendClick(303)</onup>
+                    <ondown>SendClick(304)</ondown>
+                </control>
+            </control>
+
+            <control type="label" id="2">
+                <top>140</top>
+                <left>620</left>
+                <width>400</width>
+                <height>72</height>
+                <font>Font56</font>
+                <aligny>top</aligny>
+                <textcolor>Bright</textcolor>
+                <label>$VAR[GroupName]</label>
+            </control>
+
+            <control type="grouplist" id="9300">
+                <top>0</top>
+                <left>600</left>
+                <width>400</width>
+                <height>1080</height>
+                <onright>211</onright>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <onleft>211</onleft>
+                <onright>10100</onright>
+
+                <include content="TwoLineButton">
+                    <param name="id" value="401" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Set Menu Content" />
+                    <param name="data" value="$INFO[Container(211).ListItem.Property(path)]" />
+                    <param name="onleft" value="211" />
+                    <param name="onright" value="10100" />
+                    <param name="onup" value="noop" />
+                    <param name="ondown" value="305" />
+                </include>
+
+                <include content="OneLineButton">
+                    <param name="id" value="305" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Rename Menu Item" />
+                    <param name="onleft" value="211" />
+                    <param name="onright" value="10100" />
+                    <param name="onup" value="401" />
+                    <param name="ondown" value="421" />
+                </include>
+
+                <include content="OneLineButton">
+                    <param name="id" value="421" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Set Content Type" />
+                    <param name="rightLabel" value="$INFO[Container(211).ListItem.Property(contentType)]" />
+                    <param name="onleft" value="211" />
+                    <param name="onright" value="10100" />
+                    <param name="onup" value="305" />
+                    <param name="ondown" value="308" />
+                </include>
+
+                <include content="OneLineButton">
+                    <param name="id" value="308" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Reset Menu Item" />
+                    <param name="onleft" value="211" />
+                    <param name="onright" value="10100" />
+                    <param name="onup" value="421" />
+                    <param name="ondown" value="noop" />
+                </include>
+
+                <!-- <control type="button" id="4001" description="Choose Widget">
+                    <description>Choose widget</description>
+                    <visible>String.IsEqual(Window.Property(groupname),widgets)</visible>
+                    <width>300</width>
+                    <align>left</align>
+                    <include>SettingCategoryButton</include>
+
+                    <label>choose widget</label>
+
+
+                    <onclick>SetProperty(custom-grouping,widget)</onclick>
+                    <onclick>SendClick(401)</onclick>
+
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customProperty,widgetTarget)</onback>
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customValue,music)</onback>
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SendClick(404)</onback>
+
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SetProperty(customProperty,widgetTarget)</onback>
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SetProperty(customValue,pictures)</onback>
+                    <onback condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SendClick(404)</onback>
+
+                    <onback condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customProperty,widgetTarget)</onback>
+                    <onback condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customValue,videos)</onback>
+                    <onback condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SendClick(404)</onback>
+
+                    <onback condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SetProperty(customProperty,WidgetStyle)</onback>
+                    <onback condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SetProperty(customValue,Category)</onback>
+                    <onback condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SendClick(404)</onback>
+
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customProperty,widgetTarget)</onunfocus>
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customValue,music)</onunfocus>
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SendClick(404)</onunfocus>
+
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SetProperty(customProperty,widgetTarget)</onunfocus>
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SetProperty(customValue,pictures)</onunfocus>
+                    <onunfocus condition="String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + [String.Contains(Container(211).ListItem.Property(path),Pictures)]">SendClick(404)</onunfocus>
+
+                    <onunfocus condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customProperty,widgetTarget)</onunfocus>
+                    <onunfocus condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SetProperty(customValue,videos)</onunfocus>
+                    <onunfocus condition="![String.IsEmpty(Container(211).ListItem.Property(path)) | String.IsEqual(Container(211).ListItem.Property(path),noop)] + String.IsEmpty(Container(211).ListItem.Property(widgetTarget)) + ![String.Contains(Container(211).ListItem.Property(path),Pictures) | String.Contains(Container(211).ListItem.Property(path),musicdb://) | String.Contains(Container(211).ListItem.Property(path),library://music) | String.Contains(Container(211).ListItem.Property(path),sources://music) | String.Contains(Container(211).ListItem.Property(path),plugin://plugin.audio)]">SendClick(404)</onunfocus>
+
+                    <onunfocus condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SetProperty(customProperty,WidgetStyle)</onunfocus>
+                    <onunfocus condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SetProperty(customValue,Category)</onunfocus>
+                    <onunfocus condition="String.IsEqual(Container(211).ListItem.Property(path),Library)">SendClick(404)</onunfocus>
+                </control> -->
+
+                <!-- Fake button to set custom properties -->
+                <control type="button" id="404">
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="303">
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="304">
+                    <visible>false</visible>
+                </control>
+            </control>
+
+
+            <include content="SkinShortcutsLevelControls">
+                <param name="left" value="1120" />
+                <param name="level" value="1" />
+                <param name="onleft" value="9300" />
+                <param name="onright" value="10200" />
+            </include>
+
+            <include content="SkinShortcutsLevelControls">
+                <param name="left" value="1720" />
+                <param name="level" value="2" />
+                <param name="onleft" value="10100" />
+                <param name="onright" value="10300" />
+            </include>
+
+            <include content="SkinShortcutsLevelControls" condition="String.IsEqual(Window(home).Property(sscmanage),tvshows)">
+                <param name="left" value="2320" />
+                <param name="level" value="3" />
+                <param name="onleft" value="10200" />
+                <param name="onright" value="10400" />
+            </include>
+
+            <include content="SkinShortcutsLevelControls" condition="String.IsEqual(Window(home).Property(sscmanage),tvshows)">
+                <param name="left" value="2920" />
+                <param name="level" value="4" />
+                <param name="onleft" value="10300" />
+                <param name="onright" value="noop" />
+            </include>
+        </control>
+
+
+
+        <!-- <control type="label">
+            <top>0</top>
+            <height>100</height>
+            <label>$INFO[Window(home).Property(sscmanage)]</label>
+        </control> -->
+
+    </controls>
+</window>

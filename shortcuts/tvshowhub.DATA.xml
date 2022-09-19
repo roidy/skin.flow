@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+    <shortcut>
+        <label>31031</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31025</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,plugin://script.embuary.helper/?info=getnextup,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31006</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>135</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://tvshows/genres/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>20388</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://tvshows/studios/,return)</action>
+    </shortcut>
+</shortcuts>

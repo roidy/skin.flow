@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include file="Defaults.xml" />
+    <include file="Expressions.xml" />
+
+    <include file="Includes_DebugHelpers.xml" />
+    <include file="Includes_Animations.xml" />
+    <include file="Includes_ViewLayouts.xml" />
+    <include file="Includes_MainMenu.xml" />
+    <include file="Includes_SectionNavigation.xml" />
+    <include file="Includes_ListTypes.xml" />
+    <include file="Includes_Buttons.xml" />
+    <include file="Includes_Background.xml" />
+
+    <include file="Section_Movies.xml" />
+    <include file="Section_TVShows.xml" />
+    <include file="Section_Music.xml" />
+    <include file="Section_Videos.xml" />
+    <include file="Section_Favourites.xml" />
+    <include file="Section_Settings.xml" />
+
+    <include file="Variables_Main.xml" />
+    <include file="Variables_Widget.xml" />
+
+    <include file="script-skinshortcuts-includes.xml" />
+    <include file="Includes_SkinShortcutsLevel.xml" />
+
+</includes>

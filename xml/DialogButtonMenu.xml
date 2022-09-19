@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>9000</defaultcontrol>
+    <controls>
+        <control type="group">
+     
+
+
+            <control type="group">
+                <animation effect="fade" start="0" end="100" time="100">WindowOpen</animation>
+                <animation effect="fade" start="100" end="0" time="100">WindowClose</animation>
+                <include content="CenterContext">
+                    <param name="id" value="9000" />
+                </include>
+
+                <control type="grouplist" id="9000">
+                    <description>grouplist for context buttons</description>
+                    <left>0</left>
+                    <top>174</top>
+                    <width>3840</width>
+                    <height min="60" max="2160">auto</height>
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>28</itemgap>
+
+                    <control type="button" id="1">
+                        <description>Exit button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>13012</label>
+                        <onclick>Quit()</onclick>
+                        <visible>System.ShowExitButton</visible>
+                    </control>
+                    <control type="button" id="2">
+                        <description>Shutdown button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>13016</label>
+                        <onclick>Powerdown()()</onclick>
+                        <visible>System.CanPowerDown</visible>
+                    </control>
+                    <control type="button" id="3">
+                        <description>Suspend button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>13011</label>
+                        <onclick>Suspend()</onclick>
+                        <visible>System.CanSuspend</visible>
+                    </control>
+                    <control type="button" id="4">
+                        <description>Hibernate button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>13010</label>
+                        <onclick>Hibernate()</onclick>
+                        <visible>System.CanHibernate</visible>
+                    </control>
+                    <control type="button" id="5">
+                        <description>Reboot button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>13013</label>
+                        <onclick>Reset()</onclick>
+                        <visible>System.CanReboot</visible>
+                    </control>
+                    <control type="button" id="6">
+                        <description>Reload skin button</description>
+                        <include>ContextButtonTemplate</include>
+                        <label>20183</label>
+                        <onclick>ReloadSkin()</onclick>
+                    </control>
+
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

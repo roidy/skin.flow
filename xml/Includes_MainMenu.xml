@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="MainMenu">
+        <control type="list" id="1">
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="!Control.HasFocus(1)">Conditional</animation>
+
+            <include content="CenterList72">
+                <param name="id" value="1" />
+            </include>
+            <left>120</left>
+            <width>500</width>
+
+            <!-- <onleft>2</onleft> -->
+
+            <onleft condition="$EXP[isMoviesSection]">SetProperty(sscmanage,movies,home)</onleft>
+            <onleft condition="$EXP[isMoviesSection]">RunScript(script.skinshortcuts,type=manage&amp;group=moviehub)</onleft>
+            <onleft condition="$EXP[isTVShowsSection]">SetProperty(sscmanage,tvshows,home)</onleft>
+            <onleft condition="$EXP[isTVShowsSection]">RunScript(script.skinshortcuts,type=manage&amp;group=tvshowhub)</onleft>
+            <onleft condition="$EXP[isVideosSection]">SetProperty(sscmanage,tvshows,home)</onleft>
+            <onleft condition="$EXP[isVideosSection]">RunScript(script.skinshortcuts,type=manage&amp;group=videohub)</onleft>
+
+            <onright condition="$EXP[isMoviesSection]">1001</onright>
+            <onright condition="$EXP[isTVShowsSection]">2001</onright>
+            <onright condition="$EXP[isMusicSection]">3001</onright>
+            <onright condition="$EXP[isVideosSection]">4001</onright>
+            <onright condition="$EXP[isPicturesSection]">5001</onright>
+            <onright condition="$EXP[isFavouritesSection]">6001</onright>
+            <onright condition="$EXP[isSettingsSection]">7001</onright>
+
+
+            <itemlayout width="380" height="72">
+                <include content="ListItem">
+                    <param name="id" value="1" />
+                </include>
+            </itemlayout>
+            <focusedlayout width="380" height="72">
+                <include content="ListItem">
+                    <param name="id" value="1" />
+                    <param name="focused" value="true" />
+                </include>
+            </focusedlayout>
+
+            <content>
+                <item>
+                    <label>342</label>
+                    <property name="id">movies</property>
+                </item>
+                <item>
+                    <label>31029</label>
+                    <property name="id">tvshows</property>
+                </item>
+                <item>
+                    <label>2</label>
+                    <property name="id">music</property>
+                </item>
+                <item>
+                    <label>3</label>
+                    <property name="id">videos</property>
+                </item>
+                <item>
+                    <label>1</label>
+                    <property name="id">pictures</property>
+                </item>
+                <item>
+                    <label>1036</label>
+                    <property name="id">favourites</property>
+                </item>
+                <item>
+                    <label>5</label>
+                    <property name="id">settings</property>
+                </item>
+            </content>
+
+        </control>
+    </include>
+
+
+</includes>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <expression name="isMoviesSection">String.IsEqual(Container(1).ListItem.Property(id),movies)</expression>
+    <expression name="isTVShowsSection">String.IsEqual(Container(1).ListItem.Property(id),tvshows)</expression>
+    <expression name="isMusicSection">String.IsEqual(Container(1).ListItem.Property(id),music)</expression>
+    <expression name="isVideosSection">String.IsEqual(Container(1).ListItem.Property(id),videos)</expression>
+    <expression name="isPicturesSection">String.IsEqual(Container(1).ListItem.Property(id),pictures)</expression>
+    <expression name="isFavouritesSection">String.IsEqual(Container(1).ListItem.Property(id),favourites)</expression>
+    <expression name="isSettingsSection">String.IsEqual(Container(1).ListItem.Property(id),settings)</expression>
+
+    <expression name="isHubMenu">!String.IsEmpty(ListItem.Property(list))</expression>
+
+    <expression name="isTVShowLevel3or4">[Control.HasFocus(2023) | Control.HasFocus(2024)]</expression>
+
+    <expression name="TVShowNotLevel1">
+        ![Control.HasFocus(2002) | Control.HasFocus(2003) | Control.HasFocus(2004) |
+          Control.HasFocus(2005) | Control.HasFocus(2006) | Control.HasFocus(2007) |
+          Control.HasFocus(2008) | Control.HasFocus(2009) | Control.HasFocus(2010) |
+          Control.HasFocus(2011) | Control.HasFocus(2012) | Control.HasFocus(2013) |
+          Control.HasFocus(2014) | Control.HasFocus(2015) | Control.HasFocus(2016) |
+          Control.HasFocus(2017) | Control.HasFocus(2018) | Control.HasFocus(2019) |
+          Control.HasFocus(2020) | Control.HasFocus(2021) | Control.HasFocus(2001)]
+    </expression>
+
+    <expression name="TVShowLevel1IsNotEpisode">
+        [Container(2001).Position(0) + !String.IsEqual(Container(2002).ListItem.DBType,episode)] |
+        [Container(2001).Position(1) + !String.IsEqual(Container(2003).ListItem.DBType,episode)] |
+        [Container(2001).Position(2) + !String.IsEqual(Container(2004).ListItem.DBType,episode)] |
+        [Container(2001).Position(3) + !String.IsEqual(Container(2005).ListItem.DBType,episode)] |
+        [Container(2001).Position(4) + !String.IsEqual(Container(2006).ListItem.DBType,episode)] |
+        [Container(2001).Position(5) + !String.IsEqual(Container(2007).ListItem.DBType,episode)] |
+        [Container(2001).Position(6) + !String.IsEqual(Container(2008).ListItem.DBType,episode)] |
+        [Container(2001).Position(7) + !String.IsEqual(Container(2009).ListItem.DBType,episode)] |
+        [Container(2001).Position(8) + !String.IsEqual(Container(2010).ListItem.DBType,episode)] |
+        [Container(2001).Position(9) + !String.IsEqual(Container(2011).ListItem.DBType,episode)] |
+        [Container(2001).Position(10) + !String.IsEqual(Container(2012).ListItem.DBType,episode)] |
+        [Container(2001).Position(11) + !String.IsEqual(Container(2013).ListItem.DBType,episode)] |
+        [Container(2001).Position(12) + !String.IsEqual(Container(2014).ListItem.DBType,episode)] |
+        [Container(2001).Position(13) + !String.IsEqual(Container(2015).ListItem.DBType,episode)] |
+        [Container(2001).Position(14) + !String.IsEqual(Container(2016).ListItem.DBType,episode)] |
+        [Container(2001).Position(15) + !String.IsEqual(Container(2017).ListItem.DBType,episode)] |
+        [Container(2001).Position(16) + !String.IsEqual(Container(2018).ListItem.DBType,episode)] |
+        [Container(2001).Position(17) + !String.IsEqual(Container(2019).ListItem.DBType,episode)] |
+        [Container(2001).Position(18) + !String.IsEqual(Container(2020).ListItem.DBType,episode)] |
+        [Container(2001).Position(19) + !String.IsEqual(Container(2021).ListItem.DBType,episode)]
+    </expression>
+
+    <expression name="TVShowLevel4IsNeeded">String.IsEqual(Container(2023).ListItem.DBType,season) + $EXP[TVShowLevel1IsNotEpisode]</expression>
+
+    <expression name="VideoNotLevel1">
+        ![Control.HasFocus(4002) | Control.HasFocus(4003) | Control.HasFocus(4004) |
+          Control.HasFocus(4005) | Control.HasFocus(4006) | Control.HasFocus(4007) |
+          Control.HasFocus(4008) | Control.HasFocus(4009) | Control.HasFocus(4010) |
+          Control.HasFocus(4011) | Control.HasFocus(4012) | Control.HasFocus(4013) |
+          Control.HasFocus(4014) | Control.HasFocus(4015) | Control.HasFocus(4016) |
+          Control.HasFocus(4017) | Control.HasFocus(4018) | Control.HasFocus(4019) |
+          Control.HasFocus(4020) | Control.HasFocus(4021) | Control.HasFocus(4001)]
+    </expression>
+
+    <expression name="isPlugin">String.StartsWith(Container.FolderPath,plugin://)</expression>
+    <expression name="isMovie">String.IsEqual(ListItem.DBTYPE,movie)</expression>
+    <expression name="isVideo">String.IsEqual(ListItem.DBTYPE,video)</expression>
+    <expression name="isTVShow">String.IsEqual(ListItem.DBTYPE,tvshow)</expression>
+    <expression name="isSeason">String.IsEqual(ListItem.DBTYPE,season)</expression>
+    <expression name="isSet">String.IsEqual(ListItem.DBTYPE,set)</expression>
+    <expression name="isEpisode">String.IsEqual(ListItem.DBTYPE,episode)</expression>
+    <expression name="isMusicvideo">String.IsEqual(ListItem.DBTYPE,musicvideo)</expression>
+    <expression name="isArtist">String.IsEqual(ListItem.DBTYPE,artist)</expression>
+    <expression name="isAlbum">String.IsEqual(ListItem.DBTYPE,album)</expression>
+    <expression name="isSong">String.IsEqual(ListItem.DBTYPE,song)</expression>
+    <expression name="noDBType">String.IsEmpty(ListItem.DBTYPE)</expression>
+    <expression name="isInfoDialog">[Window.IsVisible(addoninformation) | Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(songinformation)]</expression>
+
+    <expression name="DialogIsVisible">
+        Window.IsActive(DialogSelect.xml) | Window.IsActive(FileBrowser.xml) | Window.IsActive(DialogConfirm.xml)
+    </expression>
+
+    <expression name="isUnwatched">
+        [$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]] + Integer.IsEqual(ListItem.PlayCount,0)
+    </expression>
+</includes>

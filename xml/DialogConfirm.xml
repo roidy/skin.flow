@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+
+    <controls>
+
+        <control type="group">
+            
+            <control type="image">
+                <texture colordiffuse="ffb0b0b0">general/Background.png</texture>
+            </control>
+            
+            <control type="grouplist">
+                <include>WindowFadeAnimation</include>
+                <left>400</left>
+                <right>400</right>
+                <top>50</top>
+                <bottom>50</bottom>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <itemgap>32</itemgap>
+
+                <control type="label" id="1">
+                    <height>54</height>
+                    <font>Font56</font>
+                    <textcolor>Bright</textcolor>
+                    <align>center</align>
+                    <aligny>top</aligny>
+                    <scroll>true</scroll>
+                </control>
+
+                <control type="textbox" id="9">
+                    <height max="480">auto</height>
+                    <font>Font30</font>
+                    <textcolor>Grey</textcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+                </control>
+
+                <control type="group">
+                    <visible>System.Progressbar</visible>
+                    <height>8</height>
+                    <width>1120</width>
+                    <control type="image">
+                        <texture colordiffuse="Grey">controls/ProgressBack.png</texture>
+                    </control>
+                    <control type="progress" id="20">
+                        <top>-4</top>
+                        <height>8</height>
+                        <midtexture colordiffuse="Bright" border="">controls/Progress.png</midtexture>
+                        <info>System.Progressbar</info>
+                    </control>
+                </control>
+
+                <control type="grouplist" id="9000">
+                    <height>72</height>
+                    <left>0</left>
+                    <right>0</right>
+                    <orientation>horizontal</orientation>
+                    <align>center</align>
+                    <itemgap>32</itemgap>
+
+                    <control type="button" id="11">
+                        <include>DefaultButton</include>
+                    </control>
+                    <control type="button" id="10">
+                        <include>DefaultButton</include>
+                    </control>
+                    <control type="button" id="12">
+                        <include>DefaultButton</include>
+                    </control>
+
+                </control>
+
+            </control>
+
+        </control>
+
+    </controls>
+
+</window>

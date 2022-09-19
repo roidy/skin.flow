@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">8</defaultcontrol>
+
+    <controls>
+
+        <control type="image">
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout"/>
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout"/>
+            </animation>
+            <texture colordiffuse="b0080808">general/White.png</texture>
+        </control>
+
+        <control type="group">
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout"/>
+                <effect type="slide" start="800,0" end="0,0" time="516" tween="sine" easing="inout"/>
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout"/>
+                <effect type="slide" start="0,0" end="800,0" time="516" tween="sine" easing="inout"/>
+            </animation>
+
+            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(DialogSelect.xml) | Window.IsActive(FileBrowser.xml)">Conditional</animation>
+
+            <control type="group">
+
+                <control type="group">
+
+                    <control type="button" id="48">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onup>49</onup>
+                        <ondown>49</ondown>
+                        <onleft>49</onleft>
+                        <onright>49</onright>
+                        <onclick>49</onclick>
+                    </control>
+
+                    <control type="image">
+                        <top>90</top>
+                        <bottom>90</bottom>
+                        <left>140</left>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture>$VAR[MainPoster]</texture>
+                    </control>
+
+                    <control type="group">
+                        <!-- <visible>false</visible> -->
+                        <top>90</top>
+                        <width>912</width>
+                        <bottom>90</bottom>
+                        <right>136</right>
+
+                        <control type="group">
+                            <visible>!Control.HasFocus(15) + !Control.HasFocus(50)</visible>
+
+                            <control type="grouplist">
+                                <left>0</left>
+                                <right>0</right>
+                                <top>0</top>
+                                <bottom>0</bottom>
+                                <orientation>vertical</orientation>
+                                <align>center</align>
+
+                                <control type="textbox">
+                                    <top>0</top>
+                                    <left>0</left>
+                                    <right>0</right>
+                                    <height>auto</height>
+                                    <font>Font56</font>
+                                    <textcolor>Bright</textcolor>
+                                    <align>center</align>
+                                    <aligny>top</aligny>
+                                    <label>[B]$VAR[DialogInfoTitle][/B]</label>
+                                </control>
+
+                                <control type="label">
+                                    <visible>!String.IsEmpty(ListItem.TagLine)</visible>
+                                    <height>60</height>
+                                    <font>Font30</font>
+                                    <textcolor>Grey</textcolor>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.TagLine]</label>
+                                </control>
+
+                                <control type="label">
+                                    <visible>!String.IsEmpty(ListItem.Genre)</visible>
+                                    <height>60</height>
+                                    <font>Font24</font>
+                                    <textcolor>Grey</textcolor>
+                                    <align>center</align>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.Genre]</label>
+                                </control>
+
+                                <control type="textbox">
+                                    <visible>!String.IsEmpty(ListItem.Plot)</visible>
+                                    <height max="400">auto</height>
+                                    <font>Font30</font>
+                                    <textcolor>Grey</textcolor>
+                                    <align>center</align>
+                                    <label>$INFO[ListItem.Plot]</label>
+                                </control>
+                            </control>
+
+
+                            <include condition="$EXP[isMovie]">MovieBadgeBar</include>
+                            <include condition="$EXP[isTVShow]">TVShowBadgeBar</include>
+                            <include condition="$EXP[isEpisode]">EpisodeBadgeBar</include>
+
+
+                        </control>
+
+                        <control type="group">
+                            <visible>Control.HasFocus(15) | Control.Hasfocus(50)</visible>
+
+                            <control type="panel" id="50">
+                                <left>0</left>
+                                <right>0</right>
+                                <top>0</top>
+                                <bottom>0</bottom>
+                                <ondown>49</ondown>
+                                <onback>49</onback>
+
+                                <preloaditems>2</preloaditems>
+                                <orientation>horizontal</orientation>
+
+                                <itemlayout width="228" height="400">
+                                    <control type="group">
+                                        <left>2</left>
+                                        <right>2</right>
+                                        <top>2</top>
+                                        <bottom>2</bottom>
+                                        <control type="image">
+                                            <texture colordiffuse="30ff0000">general/White.png</texture>
+                                        </control>
+                                        <control type="image">
+                                            <left>17</left>
+                                            <top>17</top>
+                                            <right>17</right>
+                                            <height>285</height>
+                                            <texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
+                                        </control>
+                                    </control>
+                                    <control type="textbox">
+                                        <top>310</top>
+                                        <height>110</height>
+                                        <left>17</left>
+                                        <width>190</width>
+                                        <textcolor>Grey</textcolor>
+                                        <font>Font22</font>
+                                        <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2,as ,]</label>
+                                    </control>
+                                </itemlayout>
+                                <focusedlayout width="228" height="400">
+                                    <control type="group">
+                                        <left>2</left>
+                                        <right>2</right>
+                                        <top>2</top>
+                                        <bottom>2</bottom>
+                                        <control type="image">
+                                            <texture colordiffuse="30ff0000">general/White.png</texture>
+                                        </control>
+                                        <control type="image">
+                                            <width>3</width>
+                                            <texture colordiffuse="Primary">general/White.png</texture>
+                                        </control>
+                                        <control type="image">
+                                            <left>17</left>
+                                            <top>17</top>
+                                            <right>17</right>
+                                            <height>285</height>
+                                            <texture background="true" fallback="DefaultActor.png">$INFO[ListItem.Art(thumb)]</texture>
+                                        </control>
+                                    </control>                                </focusedlayout>
+                            </control>
+                        </control>
+                        <!-- 
+                            <control type="label">
+                                <top>180</top>
+                                <height>32</height>
+                                <font>Font42</font>
+                                <textcolor>Grey</textcolor>
+                                <align>center</align>
+                                <label>[LIGHT]$INFO[ListItem.Genre][/LIGHT]</label>
+                            </control> -->
+                        <!-- 
+                            <control type="textbox">
+                                <top>240</top>
+                                <width>2000</width>
+                                <height max="310">auto</height>
+                                <font>Font30</font>
+                                <textcolor>Grey</textcolor>
+                                <align>center</align>
+                                <label>[LIGHT]$INFO[ListItem.Plot][/LIGHT]</label>
+                            </control> -->
+
+                        <control type="button" id="6"></control>
+
+                        <control type="grouplist" id="49">
+
+                            <bottom>0</bottom>
+                            <height>100</height>
+                            <left>0</left>
+                            <right>0</right>
+                            <orientation>horizontal</orientation>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            <align>center</align>
+                            <itemgap>32</itemgap>
+                            <onup>48</onup>
+                            <onleft>back</onleft>
+
+                            <control type="button" id="8">
+                                <include>DefaultButton</include>
+                                <label>PLAY</label>
+                            </control>
+
+                            <control type="button" id="11">
+                                <visible>!String.IsEmpty(ListItem.Trailer)</visible>
+                                <include>DefaultButton</include>
+                                <label>TRAILER</label>
+                            </control>
+
+                            <control type="button" id="15">
+                                <include>DefaultButton</include>
+                                <label>CAST</label>
+                                <onup>50</onup>
+                            </control>
+
+                            <control type="button" id="10">
+                                <include>DefaultButton</include>
+                                <label>ART</label>
+                                <onup>40</onup>
+                            </control>
+
+                            <control type="button" id="16">
+                                <include>DefaultButton</include>
+                                <label>REFRESH</label>
+                                <visible>Control.IsEnabled(6)</visible>
+                                <onclick>SendClick(6)</onclick>
+                                <onup>40</onup>
+                            </control>
+
+                        </control>
+
+                        <!-- <control type="group">
+                            <visible>[$EXP[isMovie] | $EXP[isEpisode]] + !String.IsEmpty(ListItem.Director)</visible>
+                            <control type="label">
+                                <right>0</right>
+                                <width>600</width>
+                                <top>60</top>
+                                <height>32</height>
+                                <font>Font38</font>
+                                <textcolor>Grey</textcolor>
+                                <label>[B]Director[/B]</label>
+                            </control>
+                            <control type="label">
+                                <right>0</right>
+                                <width>600</width>
+                                <top>120</top>
+                                <height>32</height>
+                                <textcolor>Grey</textcolor>
+                                <font>Font42</font>
+                                <label>$INFO[ListItem.Director]</label>
+                            </control>
+                        </control> -->
+
+                        <!-- <control type="group">
+                            <visible>$EXP[isTVShow] + !String.IsEmpty(Window(home).Property(TMDBHelper.ListItem.Creator.1.Name))</visible>
+                            <control type="label">
+                                <right>0</right>
+                                <width>600</width>
+                                <top>60</top>
+                                <height>32</height>
+                                <font>Font38</font>
+                                <textcolor>Grey</textcolor>
+                                <label>[B]Creator[/B]</label>
+                            </control>
+                            <control type="label">
+                                <right>0</right>
+                                <width>600</width>
+                                <top>120</top>
+                                <height>32</height>
+                                <textcolor>Grey</textcolor>
+                                <font>Font42</font>
+                                <label>$INFO[Window(home).Property(TMDBHelper.ListItem.Creator.1.Name)]</label>
+                            </control>
+                        </control> -->
+
+                        <!-- <control type="label">
+                            <right>0</right>
+                            <width>600</width>
+                            <top>220</top>
+                            <height>32</height>
+                            <font>Font38</font>
+                            <textcolor>Grey</textcolor>
+                            <label>[B]Cast[/B]</label>
+                        </control> -->
+
+
+                        <!-- <control type="list" id="50">
+                                <left>0</left>
+                                <right>0</right>
+                                <top>240</top>
+                                <height>600</height>
+
+                                <orientation>horizontal</orientation>
+
+                                <itemlayout width="400" height="600">
+                                    <control type="group">
+                                        <include content="ItemLayout">
+                                            <param name="ListID" value="$PARAM[ListID]" />
+                                            <param name="ArtType" value="Thumb" />
+                                            <param name="Focused" value="false" />
+                                            <param name="ShowWatched" value="true" />
+                                        </include>
+                                    </control>
+                                </itemlayout>
+
+                                <focusedlayout width="400" height="600">
+                                    <control type="group">
+                                        <include content="ItemLayout">
+                                            <param name="ListID" value="$PARAM[ListID]" />
+                                            <param name="ArtType" value="Thumb" />
+                                            <param name="Focused" value="true" />
+                                            <param name="ShowWatched" value="true" />
+                                        </include>
+                                    </control>
+                                </focusedlayout>
+                            </control> -->
+
+                    </control>
+
+
+                </control>
+
+                <!-- <control type="image">
+                    <animation effect="slide" start="0,0" end="-960,0" time="200" condition="Control.HasFocus(48)">Conditional</animation>
+                    <bottom>160</bottom>
+                    <left>160</left>
+                    <width>800</width>
+                    <height>1200</height>
+                    <texture>$VAR[DialogInfoPoster]</texture>
+                </control> -->
+
+            </control>
+
+
+            <!-- Fullscreen image -->
+            <!-- <control type="image">
+                <animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
+
+                <visible>Control.HasFocus(40)</visible>
+                <texture>$VAR[DialogInfoArt]</texture>
+            </control> -->
+
+        </control>
+
+    </controls>
+</window>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <controls>
+        <control type="group">
+            <include>WindowFadeAnimation</include>
+            <top>40</top>
+            <right>80</right>
+            <height>80</height>
+            <width>600</width>
+            
+            <control type="image">
+                <colordiffuse>e0161616</colordiffuse>
+                <texture border="32">general/White.png</texture>
+            </control>
+
+            <control type="image">
+                <width>3</width>
+                <texture colordiffuse="Primary">general/White.png</texture>
+            </control>
+
+            <control type="label" id="401">
+                <top>4</top>
+                <left>18</left>
+                <right>0</right>
+                <height>34</height>
+                <textcolor>Bright</textcolor>
+                <font>Font30</font>
+                <align>top</align>
+            </control>
+            <control type="label" id="402">
+                <bottom>6</bottom>
+                <left>18</left>
+                <right>0</right>
+                <height>34</height>
+                <textcolor>Grey</textcolor>
+                <font>Font24</font>
+                <align>top</align>
+            </control>
+        </control>
+    </controls>
+</window>

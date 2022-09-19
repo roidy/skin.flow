@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">3</defaultcontrol>
+
+    <controls>
+        <control type="group">
+
+            <include>Background</include>
+            <include>Foreground</include>
+
+            <control type="group">
+                <include>WindowFadeAnimation</include>
+                <top>0</top>
+                <bottom>0</bottom>
+                <left>0</left>
+                <right>0</right>
+
+                <control type="label" id="1">
+                    <left>140</left>
+                    <top>0</top>
+                    <height>144</height>
+                    <font>Font48</font>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <textcolor>Bright</textcolor>
+                </control>
+
+                <control type="list" id="3">
+                    <top>144</top>
+                    <left>120</left>
+                    <height>864</height>
+                    <width>1800</width>
+
+                    <onleft>9000</onleft>
+                    <onright>9000</onright>
+                    <ondown>9000</ondown>
+
+                    <itemlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="3" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="3" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                </control>
+                <control type="list" id="6">
+                    <top>144</top>
+                    <left>120</left>
+                    <height>864</height>
+                    <width>1800</width>
+
+                    <onleft>9000</onleft>
+                    <onright>9000</onright>
+                    <ondown>9000</ondown>
+
+                    <itemlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="6" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="6" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                </control>
+
+                <control type="image">
+                    <left>860</left>
+                    <right>260</right>
+                    <top>260</top>
+                    <bottom>260</bottom>
+                    <aspectratio align="right">keep</aspectratio>
+                    <texture>$INFO[Container(3).ListItem.Art(thumb)]</texture>
+                </control>
+
+                <control type="grouplist" id="9000">
+                    <animation effect="slide" start="0,0" end="0,72" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,144" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+                    <bottom>72</bottom>
+                    <left>860</left>
+                    <width>1240</width>
+                    <height>216</height>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+
+                    <onleft>3</onleft>
+
+                    <control type="button" id="8">
+                        <include>DefaultButton</include>
+                    </control>
+                    <control type="button" id="5">
+                        <include>DefaultButton</include>
+                    </control>
+                    <control type="button" id="7">
+                        <include>DefaultButton</include>
+                    </control>
+
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

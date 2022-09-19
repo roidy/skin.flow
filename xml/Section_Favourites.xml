@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="FavouritesSection">
+        <control type="group">
+            <visible>$EXP[isFavouritesSection]</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="!Control.HasFocus(1)">Conditional</animation>
+
+            <!-- Main hub -->
+            <control type="group">
+                <left>620</left>
+                <width>1800</width>
+                <control type="image">
+                    <visible>Container(6001).IsUpdating</visible>
+                    <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                    <width>120</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>spinner.apng</texture>
+                </control>
+
+                <control type="list" id="6001">
+                    <include content="CenterList72">
+                        <param name="id" value="6001" />
+                    </include>
+                    <top>0</top>
+                    <height>1080</height>
+                    <onleft>1</onleft>
+                    <itemlayout width="600" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="6001" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="600" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="6001" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                    <content target="Videos">favourites://</content>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

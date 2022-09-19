@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="listType">
+        <include content="oneline">
+            <param name="id" value="$PARAM[id]" />
+            <param name="hub" value="$PARAM[hub]" />
+            <param name="level" value="$PARAM[level]" />
+        </include>
+        <include content="twoline">
+            <param name="id" value="$PARAM[id]" />
+            <param name="hub" value="$PARAM[hub]" />
+            <param name="level" value="$PARAM[level]" />
+            <param name="MainLabel" value="$PARAM[MainLabel]" />
+            <param name="SubLabel" value="$PARAM[SubLabel]" />
+        </include>
+        <include content="infoline">
+            <param name="id" value="$PARAM[id]" />
+            <param name="hub" value="$PARAM[hub]" />
+            <param name="level" value="$PARAM[level]" />
+            <param name="MainLabel" value="$PARAM[MainLabel]" />
+            <param name="SubLabel" value="$PARAM[SubLabel]" />
+        </include>
+    </include>
+
+    <include name="onelineforced">
+        <definition>
+            <itemlayout width="540" height="72">
+                <include content="ListItem">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+            </itemlayout>
+            <focusedlayout width="540" height="72">
+                <include content="ListItem">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="focused" value="true" />
+                </include>
+            </focusedlayout>
+        </definition>
+    </include>
+
+    <include name="oneline">
+        <definition>
+            <itemlayout width="540" height="72" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">
+                <include content="ListItem">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+            </itemlayout>
+            <focusedlayout width="540" height="72" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),oneline)">
+                <include content="ListItem">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="focused" value="true" />
+                </include>
+            </focusedlayout>
+        </definition>
+    </include>
+
+    <include name="twoline">
+        <definition>
+            <itemlayout width="540" height="104" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">
+                <include content="ListItemTwoLine">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="MainLabel" value="$PARAM[MainLabel]" />
+                    <param name="SubLabel" value="$PARAM[SubLabel]" />
+                </include>
+            </itemlayout>
+            <focusedlayout width="540" height="104" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),twoline)">
+                <include content="ListItemTwoLine">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="focused" value="true" />
+                    <param name="MainLabel" value="$PARAM[MainLabel]" />
+                    <param name="SubLabel" value="$PARAM[SubLabel]" />
+                </include>
+            </focusedlayout>
+        </definition>
+    </include>
+
+    <include name="infoline">
+        <definition>
+            <itemlayout width="640" height="72" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">
+                <include content="ListItem">
+                    <param name="id" value="$PARAM[id]" />
+                </include>
+            </itemlayout>
+            <focusedlayout width="640" height="216" condition="String.IsEqual(Container($PARAM[hub]).ListItem.Property(level$PARAM[level].listType),infoline)">
+                <include content="ListItemInfo">
+                    <param name="id" value="$PARAM[id]" />
+                    <param name="focused" value="true" />
+                    <param name="SubLabel" value="$PARAM[SubLabel]" />
+                </include>
+            </focusedlayout>
+        </definition>
+    </include>
+</includes>

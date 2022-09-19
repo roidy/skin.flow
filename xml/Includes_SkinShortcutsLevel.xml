@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="SkinShortcutsLevelControls">
+        <control type="group">
+            <left>$PARAM[left]</left>
+            <top>0</top>
+            <width>400</width>
+            <height>1080</height>
+
+
+            <control type="group">
+                <top>140</top>
+                <left>20</left>
+                <width>400</width>
+                <height>72</height>
+                <control type="label">
+                   <visible>String.IsEqual(Container(211).ListItem.Property(level$PARAM[level].active),True)</visible>
+                    <font>Font56</font>
+                    <aligny>top</aligny>
+                    <textcolor>Bright</textcolor>
+                    <label>Level $PARAM[level]</label>
+                </control>
+                <control type="label">
+                    <visible>!String.IsEqual(Container(211).ListItem.Property(level$PARAM[level].active),True)</visible>
+                     <font>Font56</font>
+                     <aligny>top</aligny>
+                     <textcolor>Grey</textcolor>
+                     <label>Level $PARAM[level]</label>
+                 </control>
+            </control>
+
+            <control type="grouplist" id="10$PARAM[level]00">
+                <top>0</top>
+                <left>0</left>
+                <width>400</width>
+                <height>1080</height>
+                <onright>211</onright>
+                <itemgap>0</itemgap>
+                <orientation>vertical</orientation>
+                <align>center</align>
+                <onleft>9300</onleft>
+                <onright>9400</onright>
+
+                <include content="OneLineButton">
+                    <param name="id" value="10$PARAM[level]02" />
+                    <param name="width" value="400" />
+                    <param name="label" value="$VAR[level$PARAM[level].listTypeLabelVar]" />
+                    <param name="onleft" value="$PARAM[onleft]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                    <param name="onup" value="10$PARAM[level]01" />
+                    <param name="ondown" value="10$PARAM[level]03" />
+                </include>
+
+                <include content="OneLineButton">
+                    <param name="id" value="10$PARAM[level]03" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Sort Method: $VAR[level$PARAM[level].sortMethodLabelVar]" />
+                    <param name="onleft" value="$PARAM[onleft]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                    <param name="onup" value="10$PARAM[level]02" />
+                    <param name="ondown" value="10$PARAM[level]04" />
+                </include>
+
+                <include content="OneLineButton">
+                    <param name="id" value="10$PARAM[level]04" />
+                    <param name="width" value="400" />
+                    <param name="label" value="Sort Direction: $VAR[level$PARAM[level].sortDirectionLabelVar]" />
+                    <param name="onleft" value="$PARAM[onleft]" />
+                    <param name="onright" value="$PARAM[onright]" />
+                    <param name="onup" value="10$PARAM[level]03" />
+                    <param name="ondown" value="noop" />
+                </include>
+            </control>
+
+        </control>
+
+
+    </include>
+</includes>

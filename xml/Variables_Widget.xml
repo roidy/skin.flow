@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <!-- Movie Section -->
+    <variable name="MovieLevel2Content">
+        <value condition="Container(1001).Position(0) + !String.Contains(Container(1002).ListItem.FolderPath,?info=play)">$INFO[Container(1002).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(1) + !String.Contains(Container(1003).ListItem.FolderPath,?info=play)">$INFO[Container(1003).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(2) + !String.Contains(Container(1004).ListItem.FolderPath,?info=play)">$INFO[Container(1004).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(3) + !String.Contains(Container(1005).ListItem.FolderPath,?info=play)">$INFO[Container(1005).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(4) + !String.Contains(Container(1006).ListItem.FolderPath,?info=play)">$INFO[Container(1006).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(5) + !String.Contains(Container(1007).ListItem.FolderPath,?info=play)">$INFO[Container(1007).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(6) + !String.Contains(Container(1008).ListItem.FolderPath,?info=play)">$INFO[Container(1008).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(7) + !String.Contains(Container(1009).ListItem.FolderPath,?info=play)">$INFO[Container(1009).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(8) + !String.Contains(Container(1010).ListItem.FolderPath,?info=play)">$INFO[Container(1010).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(9) + !String.Contains(Container(1011).ListItem.FolderPath,?info=play)">$INFO[Container(1011).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(10) + !String.Contains(Container(1012).ListItem.FolderPath,?info=play)">$INFO[Container(1012).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(11) + !String.Contains(Container(1013).ListItem.FolderPath,?info=play)">$INFO[Container(1013).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(12) + !String.Contains(Container(1014).ListItem.FolderPath,?info=play)">$INFO[Container(1014).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(13) + !String.Contains(Container(1015).ListItem.FolderPath,?info=play)">$INFO[Container(1015).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(14) + !String.Contains(Container(1016).ListItem.FolderPath,?info=play)">$INFO[Container(1016).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(15) + !String.Contains(Container(1017).ListItem.FolderPath,?info=play)">$INFO[Container(1017).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(16) + !String.Contains(Container(1018).ListItem.FolderPath,?info=play)">$INFO[Container(1018).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(17) + !String.Contains(Container(1019).ListItem.FolderPath,?info=play)">$INFO[Container(1019).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(18) + !String.Contains(Container(1020).ListItem.FolderPath,?info=play)">$INFO[Container(1020).ListItem.FolderPath]</value>
+        <value condition="Container(1001).Position(19) + !String.Contains(Container(1021).ListItem.FolderPath,?info=play)">$INFO[Container(1021).ListItem.FolderPath]</value>
+        <value>noop</value>
+    </variable>
+    <variable name="MovieLevel2.sortMethod">
+        <value>$INFO[Container(1001).ListItem.Property(level2.sortMethod)]</value>
+    </variable>
+    <variable name="MovieLevel2.sortDirection">
+        <value>$INFO[Container(1001).ListItem.Property(level2.sortDirection)]</value>
+    </variable>
+
+    <!-- TV Show Section -->
+    <variable name="TVShowLevel2Content">
+        <value condition="Container(2001).Position(0) + !String.Contains(Container(2002).ListItem.FolderPath,?info=play)">$INFO[Container(2002).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(1) + !String.Contains(Container(2003).ListItem.FolderPath,?info=play)">$INFO[Container(2003).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(2) + !String.Contains(Container(2004).ListItem.FolderPath,?info=play)">$INFO[Container(2004).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(3) + !String.Contains(Container(2005).ListItem.FolderPath,?info=play)">$INFO[Container(2005).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(4) + !String.Contains(Container(2006).ListItem.FolderPath,?info=play)">$INFO[Container(2006).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(5) + !String.Contains(Container(2007).ListItem.FolderPath,?info=play)">$INFO[Container(2007).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(6) + !String.Contains(Container(2008).ListItem.FolderPath,?info=play)">$INFO[Container(2008).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(7) + !String.Contains(Container(2009).ListItem.FolderPath,?info=play)">$INFO[Container(2009).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(8) + !String.Contains(Container(2010).ListItem.FolderPath,?info=play)">$INFO[Container(2010).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(9) + !String.Contains(Container(2011).ListItem.FolderPath,?info=play)">$INFO[Container(2011).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(10) + !String.Contains(Container(2012).ListItem.FolderPath,?info=play)">$INFO[Container(2012).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(11) + !String.Contains(Container(2013).ListItem.FolderPath,?info=play)">$INFO[Container(2013).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(12) + !String.Contains(Container(2014).ListItem.FolderPath,?info=play)">$INFO[Container(2014).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(13) + !String.Contains(Container(2015).ListItem.FolderPath,?info=play)">$INFO[Container(2015).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(14) + !String.Contains(Container(2016).ListItem.FolderPath,?info=play)">$INFO[Container(2016).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(15) + !String.Contains(Container(2017).ListItem.FolderPath,?info=play)">$INFO[Container(2017).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(16) + !String.Contains(Container(2018).ListItem.FolderPath,?info=play)">$INFO[Container(2018).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(17) + !String.Contains(Container(2019).ListItem.FolderPath,?info=play)">$INFO[Container(2019).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(18) + !String.Contains(Container(2020).ListItem.FolderPath,?info=play)">$INFO[Container(2020).ListItem.FolderPath]</value>
+        <value condition="Container(2001).Position(19) + !String.Contains(Container(2021).ListItem.FolderPath,?info=play)">$INFO[Container(2021).ListItem.FolderPath]</value>
+        <value>noop</value>
+    </variable>
+    <variable name="TVShowLevel2.sortMethod">
+        <value>$INFO[Container(2001).ListItem.Property(level2.sortMethod)]</value>
+    </variable>
+    <variable name="TVShowLevel2.sortDirection">
+        <value>$INFO[Container(2001).ListItem.Property(level2.sortDirection)]</value>
+    </variable>
+    <variable name="TVShowLevel3.sortMethod">
+        <value>$INFO[Container(2001).ListItem.Property(level3.sortMethod)]</value>
+    </variable>
+    <variable name="TVShowLevel3.sortDirection">
+        <value>$INFO[Container(2001).ListItem.Property(level3.sortDirection)]</value>
+    </variable>
+    <variable name="TVShowLevel4.sortMethod">
+        <value>$INFO[Container(2001).ListItem.Property(level4.sortMethod)]</value>
+    </variable>
+    <variable name="TVShowLevel4.sortDirection">
+        <value>$INFO[Container(2001).ListItem.Property(level4.sortDirection)]</value>
+    </variable>
+
+    <!-- Music Section -->
+    <variable name="MusicLevel2Content">
+        <value condition="Container(3001).Position(0) + !String.Contains(Container(3002).ListItem.FolderPath,?info=play)">$INFO[Container(3002).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(1) + !String.Contains(Container(3003).ListItem.FolderPath,?info=play)">$INFO[Container(3003).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(2) + !String.Contains(Container(3004).ListItem.FolderPath,?info=play)">$INFO[Container(3004).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(3) + !String.Contains(Container(3005).ListItem.FolderPath,?info=play)">$INFO[Container(3005).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(4) + !String.Contains(Container(3006).ListItem.FolderPath,?info=play)">$INFO[Container(3006).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(5) + !String.Contains(Container(3007).ListItem.FolderPath,?info=play)">$INFO[Container(3007).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(6) + !String.Contains(Container(3008).ListItem.FolderPath,?info=play)">$INFO[Container(3008).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(7) + !String.Contains(Container(3009).ListItem.FolderPath,?info=play)">$INFO[Container(3009).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(8) + !String.Contains(Container(3010).ListItem.FolderPath,?info=play)">$INFO[Container(3010).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(9) + !String.Contains(Container(3011).ListItem.FolderPath,?info=play)">$INFO[Container(3011).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(10) + !String.Contains(Container(3012).ListItem.FolderPath,?info=play)">$INFO[Container(3012).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(11) + !String.Contains(Container(3013).ListItem.FolderPath,?info=play)">$INFO[Container(3013).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(12) + !String.Contains(Container(3014).ListItem.FolderPath,?info=play)">$INFO[Container(3014).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(13) + !String.Contains(Container(3015).ListItem.FolderPath,?info=play)">$INFO[Container(3015).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(14) + !String.Contains(Container(3016).ListItem.FolderPath,?info=play)">$INFO[Container(3016).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(15) + !String.Contains(Container(3017).ListItem.FolderPath,?info=play)">$INFO[Container(3017).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(16) + !String.Contains(Container(3018).ListItem.FolderPath,?info=play)">$INFO[Container(3018).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(17) + !String.Contains(Container(3019).ListItem.FolderPath,?info=play)">$INFO[Container(3019).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(18) + !String.Contains(Container(3030).ListItem.FolderPath,?info=play)">$INFO[Container(3030).ListItem.FolderPath]</value>
+        <value condition="Container(3001).Position(19) + !String.Contains(Container(3021).ListItem.FolderPath,?info=play)">$INFO[Container(3021).ListItem.FolderPath]</value>
+        <value>noop</value>
+    </variable>
+    <variable name="MusicLevel2.sortMethod">
+        <value>$INFO[Container(3001).ListItem.Property(level2.sortMethod)]</value>
+    </variable>
+    <variable name="MusicLevel2.sortDirection">
+        <value>$INFO[Container(3001).ListItem.Property(level2.sortDirection)]</value>
+    </variable>
+    <variable name="MusicLevel3.sortMethod">
+        <value>$INFO[Container(3001).ListItem.Property(level3.sortMethod)]</value>
+    </variable>
+    <variable name="MusicLevel3.sortDirection">
+        <value>$INFO[Container(3001).ListItem.Property(level3.sortDirection)]</value>
+    </variable>
+    <variable name="MusicLevel4.sortMethod">
+        <value>$INFO[Container(3001).ListItem.Property(level4.sortMethod)]</value>
+    </variable>
+    <variable name="MusicLevel4.sortDirection">
+        <value>$INFO[Container(3001).ListItem.Property(level4.sortDirection)]</value>
+    </variable>
+
+    <!-- Video Section -->
+    <variable name="VideoLevel2Content">
+        <value condition="Container(4001).Position(0) + !String.Contains(Container(4002).ListItem.FolderPath,?info=play)">$INFO[Container(4002).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(1) + !String.Contains(Container(4003).ListItem.FolderPath,?info=play)">$INFO[Container(4003).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(2) + !String.Contains(Container(4004).ListItem.FolderPath,?info=play)">$INFO[Container(4004).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(3) + !String.Contains(Container(4005).ListItem.FolderPath,?info=play)">$INFO[Container(4005).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(4) + !String.Contains(Container(4006).ListItem.FolderPath,?info=play)">$INFO[Container(4006).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(5) + !String.Contains(Container(4007).ListItem.FolderPath,?info=play)">$INFO[Container(4007).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(6) + !String.Contains(Container(4008).ListItem.FolderPath,?info=play)">$INFO[Container(4008).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(7) + !String.Contains(Container(4009).ListItem.FolderPath,?info=play)">$INFO[Container(4009).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(8) + !String.Contains(Container(4010).ListItem.FolderPath,?info=play)">$INFO[Container(4010).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(9) + !String.Contains(Container(4011).ListItem.FolderPath,?info=play)">$INFO[Container(4011).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(10) + !String.Contains(Container(4012).ListItem.FolderPath,?info=play)">$INFO[Container(4012).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(11) + !String.Contains(Container(4013).ListItem.FolderPath,?info=play)">$INFO[Container(4013).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(12) + !String.Contains(Container(4014).ListItem.FolderPath,?info=play)">$INFO[Container(4014).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(13) + !String.Contains(Container(4015).ListItem.FolderPath,?info=play)">$INFO[Container(4015).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(14) + !String.Contains(Container(4016).ListItem.FolderPath,?info=play)">$INFO[Container(4016).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(15) + !String.Contains(Container(4017).ListItem.FolderPath,?info=play)">$INFO[Container(4017).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(16) + !String.Contains(Container(4018).ListItem.FolderPath,?info=play)">$INFO[Container(4018).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(17) + !String.Contains(Container(4019).ListItem.FolderPath,?info=play)">$INFO[Container(4019).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(18) + !String.Contains(Container(4040).ListItem.FolderPath,?info=play)">$INFO[Container(4040).ListItem.FolderPath]</value>
+        <value condition="Container(4001).Position(19) + !String.Contains(Container(4021).ListItem.FolderPath,?info=play)">$INFO[Container(4021).ListItem.FolderPath]</value>
+        <value>noop</value>
+    </variable>
+    <variable name="VideoLevel2.sortMethod">
+        <value>$INFO[Container(4001).ListItem.Property(level2.sortMethod)]</value>
+    </variable>
+    <variable name="VideoLevel2.sortDirection">
+        <value>$INFO[Container(4001).ListItem.Property(level2.sortDirection)]</value>
+    </variable>
+    <variable name="VideoLevel3.sortMethod">
+        <value>$INFO[Container(4001).ListItem.Property(level3.sortMethod)]</value>
+    </variable>
+    <variable name="VideoLevel3.sortDirection">
+        <value>$INFO[Container(4001).ListItem.Property(level3.sortDirection)]</value>
+    </variable>
+    <variable name="VideoLevel4.sortMethod">
+        <value>$INFO[Container(4001).ListItem.Property(level4.sortMethod)]</value>
+    </variable>
+    <variable name="VideoLevel4.sortDirection">
+        <value>$INFO[Container(4001).ListItem.Property(level4.sortDirection)]</value>
+    </variable>
+
+
+    <variable name="GroupName">
+        <value condition="String.IsEqual(Window.Property(groupname),moviehub)">$LOCALIZE[31026]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),tvshowhub)">$LOCALIZE[31027]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),musichub)">$LOCALIZE[31028]</value>
+        <value condition="String.IsEqual(Window.Property(groupname),videohub)">$LOCALIZE[31004]</value>
+    </variable>
+
+    <variable name="level1.listTypeLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.listType),oneline)">$LOCALIZE[31007]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.listType),twoline)">$LOCALIZE[31009]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.listType),infoline)">$LOCALIZE[31002]</value>
+    </variable>
+    <variable name="level2.listTypeLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.listType),oneline)">$LOCALIZE[31007]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.listType),twoline)">$LOCALIZE[31009]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.listType),infoline)">$LOCALIZE[31002]</value>
+    </variable>
+    <variable name="level3.listTypeLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.listType),oneline)">$LOCALIZE[31007]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.listType),twoline)">$LOCALIZE[31009]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.listType),infoline)">$LOCALIZE[31002]</value>
+    </variable>
+    <variable name="level4.listTypeLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.listType),oneline)">$LOCALIZE[31007]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.listType),twoline)">$LOCALIZE[31009]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.listType),infoline)">$LOCALIZE[31002]</value>
+    </variable>
+
+    <variable name="level1.sortMethodLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),title)">$LOCALIZE[369]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),label)">$LOCALIZE[21899]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),name)">$LOCALIZE[551]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),random)">$LOCALIZE[590]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),dateadded)">$LOCALIZE[31015]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),lastplayed)">$LOCALIZE[31017]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),playcount)">$LOCALIZE[31018]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),year)">$LOCALIZE[345]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),rating)">$LOCALIZE[563]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),episodenumber)">$LOCALIZE[31019]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),season)">$LOCALIZE[20373]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),tvshowtitle)">$LOCALIZE[31024]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),file)">$LOCALIZE[561]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),tracknumber)">$LOCALIZE[31021]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),time)">$LOCALIZE[555]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),artist)">$LOCALIZE[557]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),album)">$LOCALIZE[558]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),lastupdated)">$LOCALIZE[31022]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),lastused)">$LOCALIZE[31023]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortMethod),date)">$LOCALIZE[552]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level2.sortMethodLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),title)">$LOCALIZE[369]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),label)">$LOCALIZE[21899]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),name)">$LOCALIZE[551]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),random)">$LOCALIZE[590]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),dateadded)">$LOCALIZE[31015]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),lastplayed)">$LOCALIZE[31017]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),playcount)">$LOCALIZE[31018]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),year)">$LOCALIZE[345]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),rating)">$LOCALIZE[563]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),episodenumber)">$LOCALIZE[31019]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),season)">$LOCALIZE[20373]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),tvshowtitle)">$LOCALIZE[31024]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),file)">$LOCALIZE[561]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),tracknumber)">$LOCALIZE[31021]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),time)">$LOCALIZE[555]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),artist)">$LOCALIZE[557]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),album)">$LOCALIZE[558]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),lastupdated)">$LOCALIZE[31022]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),lastused)">$LOCALIZE[31023]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortMethod),date)">$LOCALIZE[552]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level3.sortMethodLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),title)">$LOCALIZE[369]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),label)">$LOCALIZE[21899]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),name)">$LOCALIZE[551]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),random)">$LOCALIZE[590]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),dateadded)">$LOCALIZE[31015]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),lastplayed)">$LOCALIZE[31017]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),playcount)">$LOCALIZE[31018]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),year)">$LOCALIZE[345]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),rating)">$LOCALIZE[563]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),episodenumber)">$LOCALIZE[31019]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),season)">$LOCALIZE[20373]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),tvshowtitle)">$LOCALIZE[31024]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),file)">$LOCALIZE[561]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),tracknumber)">$LOCALIZE[31021]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),time)">$LOCALIZE[555]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),artist)">$LOCALIZE[557]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),album)">$LOCALIZE[558]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),lastupdated)">$LOCALIZE[31022]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),lastused)">$LOCALIZE[31023]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortMethod),date)">$LOCALIZE[552]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level4.sortMethodLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),title)">$LOCALIZE[369]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),label)">$LOCALIZE[21899]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),name)">$LOCALIZE[551]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),random)">$LOCALIZE[590]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),dateadded)">$LOCALIZE[31015]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),lastplayed)">$LOCALIZE[31017]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),playcount)">$LOCALIZE[31018]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),year)">$LOCALIZE[345]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),rating)">$LOCALIZE[563]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),episodenumber)">$LOCALIZE[31019]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),season)">$LOCALIZE[20373]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),tvshowtitle)">$LOCALIZE[31024]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),file)">$LOCALIZE[561]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),tracknumber)">$LOCALIZE[31021]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),time)">$LOCALIZE[555]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),artist)">$LOCALIZE[557]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),album)">$LOCALIZE[558]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),lastupdated)">$LOCALIZE[31022]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),lastused)">$LOCALIZE[31023]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortMethod),date)">$LOCALIZE[552]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+
+    <variable name="level1.sortDirectionLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortDirection),ascending)">$LOCALIZE[584]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level1.sortDirection),descending)">$LOCALIZE[585]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level2.sortDirectionLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortDirection),ascending)">$LOCALIZE[584]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level2.sortDirection),descending)">$LOCALIZE[585]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level3.sortDirectionLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortDirection),ascending)">$LOCALIZE[584]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level3.sortDirection),descending)">$LOCALIZE[585]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+    <variable name="level4.sortDirectionLabelVar">
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortDirection),ascending)">$LOCALIZE[584]</value>
+        <value condition="String.IsEqual(Container(211).ListItem.Property(level4.sortDirection),descending)">$LOCALIZE[585]</value>
+        <value>$LOCALIZE[231]</value>
+    </variable>
+
+
+</includes>

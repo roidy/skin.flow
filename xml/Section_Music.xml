@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="MusicSection">
+        <control type="group">
+            <visible>$EXP[isMusicSection]</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="!Control.HasFocus(1)">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="ControlGroup(3000).HasFocus">Conditional</animation>
+
+            <!-- Main hub -->
+            <control type="group">
+                <left>620</left>
+                <width>1800</width>
+                <control type="image">
+                    <visible>Container(3001).IsUpdating</visible>
+                    <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                    <width>120</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>spinner.apng</texture>
+                </control>
+
+                <control type="list" id="3001">
+                    <include content="CenterList72">
+                        <param name="id" value="3001" />
+                    </include>
+                    <top>0</top>
+                    <height>1080</height>
+                    <onleft>1</onleft>
+                    <include>MusicHubRight</include>
+                    <onclick>noop</onclick>
+                    <itemlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="3001" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="3001" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                    <content>
+                        <include>skinshortcuts-group-musichub</include>
+                    </content>
+                </control>
+            </control>
+
+            <control type="grouplist" id="3000">
+                <visible>$EXP[isMusicSection]</visible>
+                <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+                <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+                <top>0</top>
+                <left>1000</left>
+                <width>1920</width>
+                <height>1080</height>
+                <orientation>horizontal</orientation>
+                <itemgap>-1300</itemgap>
+                <usecontrolcoords>true</usecontrolcoords>
+
+                <onleft>1</onleft>
+                <onright>info</onright>
+
+                <!-- Level 1 -->
+                <control type="group">
+                    <width>1920</width>
+                    <animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(3022)">Conditional</animation>
+                    <include>skinshortcuts-template-MusicLevel1</include>
+                </control>
+
+                <!-- Level 2 -->
+                <control type="group">
+                    <!-- <visible>$EXP[TVShowLevel1IsNotEpisode]</visible> -->
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container(3022).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="3022">
+                        <top>72</top>
+                        <height>936</height>
+                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(3022).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(3022).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(3023)">Conditional</animation>
+                        <include content="CenterList">
+                            <param name="id" value="3022" />
+                            <param name="hub" value="3001" />
+                            <param name="level" value="2" />
+                        </include>
+                        <preloaditems>2</preloaditems>
+                        <onclick>noop</onclick>
+                        <include>MusicLevel2Left</include>
+                        <onright>3023</onright>
+
+                        <include content="listType">
+                            <param name="id" value="3022" />
+                            <param name="hub" value="3001" />
+                            <param name="level" value="2" />
+                            <param name="MainLabel" value="$VAR[MusicMainLabel]" />
+                            <param name="SubLabel" value="$VAR[MusicSubLabel]" />
+                        </include>
+
+                        <content target="videos" sortby="$VAR[MusicLevel2.sortMethod]" sortorder="$VAR[MusicLevel2.sortDirection]">$VAR[MusicLevel2Content]</content>
+                    </control>
+                </control>
+
+                <!-- Level 3 -->
+                <control type="group">
+                    <!-- <visible>$EXP[TVShowLevel1IsNotEpisode] + $EXP[TVShowNotLevel1]</visible> -->
+                    <animation effect="fade" start="" end="100" time="200">VisibleChange</animation>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container(3023).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="3023">
+                        <top>72</top>
+                        <height>936</height>
+                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(3023).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(3023).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(3024)">Conditional</animation>
+                        <include content="CenterList">
+                            <param name="id" value="3023" />
+                            <param name="hub" value="3001" />
+                            <param name="level" value="3" />
+                        </include>
+                        <preloaditems>2</preloaditems>
+                        <onclick>noop</onclick>
+                        <onleft>3022</onleft>
+                        <onright>3024</onright>
+
+                        <include content="listType">
+                            <param name="id" value="3023" />
+                            <param name="hub" value="3001" />
+                            <param name="level" value="3" />
+                            <param name="MainLabel" value="$VAR[MusicMainLabel]" />
+                            <param name="SubLabel" value="$VAR[MusicSubLabel]" />
+                        </include>
+
+                        <content target="music" sortby="$VAR[MusicLevel3.sortMethod]" sortorder="$VAR[MusicLevel3.sortDirection]">$INFO[Container(3022).ListItem.FolderPath]</content>
+                    </control>
+                </control>
+
+                <!-- Level 4 -->
+                <control type="group">
+                    <visible>$EXP[TVShowLevel4IsNeeded] + $EXP[TVShowNotLevel1] + !Control.HasFocus(2022)</visible>
+                    <animation effect="fade" start="" end="100" time="200">VisibleChange</animation>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container(2024).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="2024">
+                        <top>72</top>
+                        <height>936</height>
+                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2024).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2024).IsUpdating">Conditional</animation>
+                        <include content="CenterList">
+                            <param name="id" value="2024" />
+                            <param name="hub" value="2001" />
+                            <param name="level" value="4" />
+                        </include>
+                        <preloaditems>2</preloaditems>
+                        <onclick>noop</onclick>
+                        <onleft>2023</onleft>
+                        <onright>info</onright>
+
+                        <include content="listType">
+                            <param name="id" value="2024" />
+                            <param name="hub" value="2001" />
+                            <param name="level" value="4" />
+                            <param name="MainLabel" value="$VAR[TVShowMainLabel]" />
+                            <param name="SubLabel" value="$VAR[TVShowSubLabel]" />
+                        </include>
+
+                        <content target="videos" sortby="$VAR[TVShowLevel4.sortMethod]" sortorder="$VAR[TVShowLevel4.sortDirection]">$INFO[Container(2023).ListItem.FolderPath]</content>
+                    </control>
+                </control>
+            </control>
+
+        </control>
+    </include>
+
+</includes>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">450</defaultcontrol>
+
+    <controls>
+        <control type="group">
+
+            <include content="Background">
+                <param name="fadetime" value="0" />
+            </include>
+            <include content="Foreground">
+                <param name="fadetime" value="0" />
+            </include>
+            
+            <control type="group">
+                <include>WindowFadeAnimation</include>
+                <top>0</top>
+                <bottom>0</bottom>
+                <left>0</left>
+                <right>0</right>
+
+                <control type="label" id="411">
+                    <left>140</left>
+                    <top>0</top>
+                    <height>144</height>
+                    <font>Font48</font>
+                    <aligny>center</aligny>
+                    <align>left</align>
+                    <textcolor>Bright</textcolor>
+                </control>
+
+                <control type="list" id="450">
+                    <top>144</top>
+                    <left>120</left>
+                    <height>864</height>
+                    <width>1800</width>
+
+                    <onright>9000</onright>
+
+                    <itemlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="450" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="600" height="72">
+                        <include content="ListItemWithSelect">
+                            <param name="id" value="450" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+                </control>
+
+                <control type="image">
+                    <left>860</left>
+                    <right>260</right>
+                    <top>260</top>
+                    <bottom>260</bottom>
+                    <aspectratio align="right">keep</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture>$INFO[Container(450).ListItem.Art(thumb)]</texture>
+                </control>
+
+                <control type="grouplist" id="9000">
+                    <animation effect="slide" start="0,0" end="0,72" time="0" condition="Integer.IsEqual(Container(9000).NumItems,2)">Conditional</animation>
+                    <animation effect="slide" start="0,0" end="0,144" time="0" condition="Integer.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+                    <bottom>72</bottom>
+                    <left>860</left>
+                    <width>1240</width>
+                    <height>216</height>
+                    <orientation>vertical</orientation>
+                    <itemgap>0</itemgap>
+
+                    <onleft>450</onleft>
+
+                    <control type="button" id="413">
+                        <include>DefaultButton</include>
+                        <label>186</label>
+                        <visible>Control.IsEnabled(413)</visible>
+                    </control>
+                    <control type="button" id="414">
+                        <include>DefaultButton</include>
+                        <label>222</label>
+                        <visible>Control.IsEnabled(414)</visible>
+                    </control>
+                    <control type="button" id="415">
+                        <include>DefaultButton</include>
+                        <label>119</label>
+                        <visible>Control.IsEnabled(415)</visible>
+                    </control>
+                    <control type="radiobutton" id="416">
+                        <include>DefaultButton</include>
+                        <radioposx>300</radioposx>
+                        <label>749</label>
+                        <visible>Control.IsEnabled(416)</visible>
+                    </control>
+
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,129 @@
+# Kodi Media Center language file
+# Addon Name: Appie
+# Addon id: skin.appie
+# Addon Provider: roidy
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en_GB\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+msgctxt "#31000"
+msgid "All Movies"
+msgstr ""
+
+msgctxt "#31001"
+msgid "Art"
+msgstr ""
+
+msgctxt "#31002"
+msgid "Info Line List"
+msgstr ""
+
+msgctxt "#31003"
+msgid "Collections"
+msgstr ""
+
+msgctxt "#31004"
+msgid "Video Hub"
+msgstr ""
+
+msgctxt "#31005"
+msgid "CoreELEC"
+msgstr ""
+
+msgctxt "#31006"
+msgid "Just Added"
+msgstr ""
+
+msgctxt "#31007"
+msgid "One Line List"
+msgstr ""
+
+msgctxt "#31009"
+msgid "Two Line List"
+msgstr ""
+
+msgctxt "#31010"
+msgid "Select List Type"
+msgstr ""
+
+msgctxt "#31011"
+msgid "Select Sort Method"
+msgstr ""
+
+msgctxt "#31012"
+msgid "Select Sort Direction"
+msgstr ""
+
+msgctxt "#31013"
+msgid "Select Content Type"
+msgstr ""
+
+msgctxt "#31015"
+msgid "Date Added"
+msgstr ""
+
+msgctxt "#31017"
+msgid "Last Played"
+msgstr ""
+
+msgctxt "#31018"
+msgid "Play Count"
+msgstr ""
+
+msgctxt "#31019"
+msgid "Episode Number"
+msgstr ""
+
+msgctxt "#31021"
+msgid "Track Number"
+msgstr ""
+
+msgctxt "#31022"
+msgid "Last Updated"
+msgstr ""
+
+msgctxt "#31023"
+msgid "Last Used"
+msgstr ""
+
+msgctxt "#31024"
+msgid "Series Title"
+msgstr ""
+
+msgctxt "#31025"
+msgid "Next Episodes"
+msgstr ""
+
+msgctxt "#31026"
+msgid "Movie Hub"
+msgstr ""
+
+msgctxt "#31027"
+msgid "TV Show Hub"
+msgstr ""
+
+msgctxt "#31028"
+msgid "Music Hub"
+msgstr ""
+
+msgctxt "#31029"
+msgid "TV Shows"
+msgstr ""
+
+msgctxt "#31031"
+msgid "All TV Shows"
+msgstr ""
+
+msgctxt "#31032"
+msgid "Info List"
+msgstr ""

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="SettingsSection">
+        <!-- Settings -->
+
+        <!-- Sub Menu -->
+        <control type="group">
+            <visible>$EXP[isSettingsSection]</visible>
+            <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+            <animation effect="slide" start="0,0" end="-500,0" time="322" tween="sine" easing="inout" condition="!Control.HasFocus(1)">Conditional</animation>
+            <left>620</left>
+            <width>1800</width>
+
+            <control type="list" id="7001">
+                <include content="CenterList72">
+                    <param name="id" value="7001" />
+                </include>
+                <top>0</top>
+                <height>1080</height>
+                <width>600</width>
+                <onleft>1</onleft>
+                <onright>$INFO[ListItem.Property(action)]</onright>
+                <onclick>noop</onclick>
+                <itemlayout width="600" height="72">
+                    <include content="ListItem">
+                        <param name="id" value="7001" />
+                    </include>
+                </itemlayout>
+                <focusedlayout width="600" height="72">
+                    <include content="ListItem">
+                        <param name="id" value="7001" />
+                        <param name="focused" value="true" />
+                    </include>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label>$LOCALIZE[14206]</label>
+                        <property name="action">ActivateWindow(InterfaceSettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[14200]</label>
+                        <property name="action">ActivateWindow(PlayerSettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[14211]</label>
+                        <property name="action">ActivateWindow(MediaSettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[19020]</label>
+                        <property name="action">ActivateWindow(pvrsettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[15016]</label>
+                        <property name="action">ActivateWindow(gamesettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[13000]</label>
+                        <property name="action">ActivateWindow(SystemSettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[705]</label>
+                        <property name="action">ActivateWindow(ServiceSettings)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[13200]</label>
+                        <property name="action">ActivateWindow(Profiles)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[24001]</label>
+                        <property name="action">ActivateWindow(AddonBrowser)</property>
+                    </item>
+                    <item>
+                        <label>$LOCALIZE[31005]</label>
+                        <property name="action">RunAddon(service.coreelec.settings)</property>
+                        <visible>System.HasAddon(service.coreelec.settings)</visible>
+                    </item>
+                </content>
+            </control>
+        </control>
+    </include>
+</includes>

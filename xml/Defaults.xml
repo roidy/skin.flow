@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <default type="label">
+        <align>left</align>
+        <aligny>center</aligny>
+        <font>LabelFont</font>
+        <textcolor>Grey</textcolor>
+        <selectedcolor>Bright</selectedcolor>
+        <scrollspeed>80</scrollspeed>
+        <shadowcolor>e0060606</shadowcolor>
+        <scrollsuffix>  ·  </scrollsuffix>
+    </default>
+
+    <default type="button">
+        <font>LabelFont</font>
+        <textcolor>Grey</textcolor>
+        <focusedcolor>Grey</focusedcolor>
+        <aligny>center</aligny>
+        <pulseonselect>false</pulseonselect>
+    </default>
+
+    <default type="togglebutton">
+        <aligny>center</aligny>
+        <pulseonselect>false</pulseonselect>
+    </default>
+
+    <default type="textbox">
+        <shadowcolor>e0060606</shadowcolor>
+    </default>
+
+    <default type="progress">
+    </default>
+
+    <default type="spincontrol">
+        <textureup colordiffuse="Grey">controls/SpinUp.png</textureup>
+        <textureupfocus colordiffuse="Dark">controls/SpinUp.png</textureupfocus>
+        <texturedown colordiffuse="Grey">controls/SpinDown.png</texturedown>
+        <texturedownfocus colordiffuse="Dark">controls/SpinDown.png</texturedownfocus>
+        <textureupdisabled colordiffuse="Grey">controls/SpinUp.png</textureupdisabled>
+        <texturedowndisabled colordiffuse="Grey">controls/SpinDown.png</texturedowndisabled>
+        <spinwidth>64</spinwidth>
+        <spinheight>64</spinheight>
+        <pulseonselect>false</pulseonselect>
+    </default>
+
+    <default type="spincontrolex">
+        <textureup colordiffuse="Grey">controls/SpinUp.png</textureup>
+        <textureupfocus colordiffuse="Bright">controls/SpinUp.png</textureupfocus>
+        <texturedown colordiffuse="Grey">controls/SpinDown.png</texturedown>
+        <texturedownfocus colordiffuse="Bright">controls/SpinDown.png</texturedownfocus>
+        <textureupdisabled colordiffuse="Grey">controls/SpinUp.png</textureupdisabled>
+        <texturedowndisabled colordiffuse="Grey">controls/SpinDown.png</texturedowndisabled>
+        <spinwidth>32</spinwidth>
+        <spinheight>32</spinheight>
+        <pulseonselect>false</pulseonselect>
+    </default>
+
+    <default type="radiobutton">
+        <textureradioonfocus colordiffuse="Bright">controls/Checked.png</textureradioonfocus>
+        <textureradioonnofocus colordiffuse="Grey">controls/Checked.png</textureradioonnofocus>
+        <textureradioofffocus colordiffuse="Bright">controls/Unchecked.png</textureradioofffocus>
+        <textureradiooffnofocus colordiffuse="Grey">controls/Unchecked.png</textureradiooffnofocus>
+        <radiowidth>32</radiowidth>
+        <radioheight>32</radioheight>
+        <radioposx>1936</radioposx>
+    </default>
+
+    <default type="slider">
+    </default>
+
+    <default type="sliderex">
+    </default>
+
+    <default type="mover">
+    </default> 
+
+    <default type="resize">
+    </default>
+
+    <default type="edit">
+    </default>
+
+    <default type="group">
+    </default>
+
+    <default type="scrollbar">
+    </default>
+
+    <default type="grouplist">
+        <itemgap>0</itemgap>
+        <scrolltime tween="sine" easing="inout">400</scrolltime>
+    </default>
+
+    <default type="list">
+        <!-- <scrolltime tween="sine" easing="inout">400</scrolltime> -->
+    </default>
+
+    <default type="wraplist">
+        <scrolltime tween="sine" easing="inout">400</scrolltime>
+    </default>
+
+    <default type="fixedlist">
+        <scrolltime tween="sine" easing="inout">400</scrolltime>
+    </default>
+
+    <default type="panel">
+        <scrolltime tween="sine" easing="inout">400</scrolltime>
+    </default>
+</includes>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="ListItem">
+        <param name="focused" default="false" />
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <width>3</width>
+                    <texture colordiffuse="Primary">general/White.png</texture>
+                </control>
+
+                <control type="group">
+                    <visible>$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]</visible>
+                    <control type="image">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>14</left>
+                        <top>25</top>
+                        <width>22</width>
+                        <height>22</height>
+                        <colordiffuse>Grey</colordiffuse>
+                        <texture>$VAR[WatchedProgress]</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>14</left>
+                        <top>25</top>
+                        <width>22</width>
+                        <height>22</height>
+                        <colordiffuse>Bright</colordiffuse>
+                        <texture>$VAR[WatchedProgress]</texture>
+                    </control>
+                </control>
+
+
+                <control type="group">
+                    <animation effect="slide" start="0,0" end="26,0" time="0" condition="$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]">Conditional</animation>
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <top>-3</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <top>-3</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ListItemTwoLine">
+        <param name="focused" default="false" />
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <width>3</width>
+                    <texture colordiffuse="Primary">general/White.png</texture>
+                </control>
+
+                <control type="group">
+                    <visible>$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]</visible>
+                    <control type="image">
+                        <left>20</left>
+                        <bottom>18</bottom>
+                        <width>22</width>
+                        <height>22</height>
+                        <colordiffuse>Grey</colordiffuse>
+                        <texture>$VAR[WatchedProgress]</texture>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <top>12</top>
+                        <height>34</height>
+                        <left>20</left>
+                        <right>0</right>
+                        <aligny>top</aligny>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[MainLabel]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <top>12</top>
+                        <height>34</height>
+                        <left>20</left>
+                        <right>0</right>
+                        <aligny>top</aligny>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$PARAM[MainLabel][/B]</label>
+                    </control>
+                </control>
+
+                <control type="label">
+                    <animation effect="slide" start="0,0" end="32,0" time="0" condition="$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]">Conditional</animation>
+                    <bottom>24</bottom>
+                    <height>22</height>
+                    <left>20</left>
+                    <right>0</right>
+                    <aligny>top</aligny>
+                    <font>Font22</font>
+                    <textcolor>Grey</textcolor>
+                    <label>$PARAM[SubLabel]</label>
+                </control>
+
+            </control>
+        </definition>
+    </include>
+
+    <include name="ListItemInfo">
+        <param name="focused" default="false" />
+        <definition>
+            <control type="group">
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <!-- <height>52</height> -->
+                    <width>3</width>
+                    <texture colordiffuse="Primary">general/White.png</texture>
+                </control>
+
+                <control type="group">
+                    <visible>$EXP[isMovie] | $EXP[isTVShow] | $EXP[isSeason] | $EXP[isEpisode]</visible>
+                    <control type="image">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>14</left>
+                        <top>25</top>
+                        <width>22</width>
+                        <height>22</height>
+                        <colordiffuse>Grey</colordiffuse>
+                        <texture>$VAR[WatchedProgress]</texture>
+                    </control>
+                    <control type="image">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>14</left>
+                        <top>25</top>
+                        <width>22</width>
+                        <height>22</height>
+                        <colordiffuse>Bright</colordiffuse>
+                        <texture>$VAR[WatchedProgress]</texture>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <top>18</top>
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>46</left>
+                        <right>0</right>
+                        <height>32</height>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>46</left>
+                        <right>0</right>
+                        <height>32</height>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+
+                    <control type="textbox">
+                        <left>20</left>
+                        <top>44</top>
+                        <right>0</right>
+                        <height>100</height>
+                        <font>Font24</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Plot]</label>
+                    </control>
+
+                    <control type="label">
+                        <bottom>24</bottom>
+                        <height>22</height>
+                        <left>20</left>
+                        <right>0</right>
+                        <aligny>top</aligny>
+                        <font>Font20</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[SubLabel]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ListItemWithSelect">
+        <param name="focused" default="false" />
+        <definition>
+            <control type="group">
+
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                    <top>10</top>
+                    <bottom>10</bottom>
+                    <width>3</width>
+                    <texture colordiffuse="Primary">general/White.png</texture>
+                </control>
+
+                <control type="group">
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </control>
+
+                <control type="label">
+                    <visible>ListItem.IsSelected</visible>
+                    <right>20</right>
+                    <font>SmallIcon</font>
+                    <align>right</align>
+                    <label>&#xeb7b;</label>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="ListItemEpisode">
+        <param name="focused" default="false" />
+        <definition>
+            <control type="group">
+                <top>16</top>
+                <bottom>16</bottom>
+                <control type="image">
+                    <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                    <width>3</width>
+                    <texture colordiffuse="Primary">general/White.png</texture>
+                </control>
+
+                <control type="image">
+                    <left>8</left>
+                    <width>423</width>
+                    <texture>$INFO[ListItem.Art(thumb)]</texture>
+                </control>
+
+                <!-- <animation effect="fade" start="100" end="50" time="0" condition="!$PARAM[focused]">Conditional</animation> -->
+                <control type="group">
+                    <left>450</left>
+                    <control type="label">
+                        <visible>!Control.HasFocus($PARAM[id]) | !$PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+
+                    <control type="label">
+                        <visible>Control.HasFocus($PARAM[id]) + $PARAM[focused]</visible>
+                        <left>20</left>
+                        <right>0</right>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+</includes>

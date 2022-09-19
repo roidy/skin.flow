@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <!-- Return episode number with leading zero -->
+    <variable name="EpsNumber">
+        <value condition="Integer.IsEqual(ListItem.Episode,0)">00</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,1)">01</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,2)">02</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,3)">03</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,4)">04</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,5)">05</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,6)">06</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,7)">07</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,8)">08</value>
+        <value condition="Integer.IsEqual(ListItem.Episode,9)">09</value>
+        <value>$INFO[ListItem.Episode]</value>
+    </variable>
+
+    <!-- Return track number without leading zero -->
+    <variable name="TrackNumber">
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,0)">0</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,1)">1</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,2)">2</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,3)">3</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,4)">4</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,5)">5</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,6)">6</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,7)">7</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,8)">8</value>
+        <value condition="Integer.IsEqual(ListItem.TrackNumber,9)">9</value>
+        <value>$INFO[ListItem.TrackNumber]</value>
+    </variable>
+
+    <!-- Return track duration minutes without leading zero -->
+    <variable name="TrackDurationMinutes">
+        <value condition="String.IsEqual(ListItem.Duration(m),01)">1</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),02)">2</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),03)">3</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),04)">4</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),05)">5</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),06)">6</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),07)">7</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),08)">8</value>
+        <value condition="String.IsEqual(ListItem.Duration(m),09)">9</value>
+        <value>$INFO[ListItem.Duration(m)]</value>
+    </variable>
+
+    <variable name="WatchedProgress">
+
+        <value condition="Integer.IsEqual(ListItem.PercentPlayed,0) + Integer.IsEqual(ListItem.PlayCount,0)">progress/0.png</value>
+        <value condition="Integer.IsEqual(ListItem.PercentPlayed,0) + Integer.IsGreater(ListItem.PlayCount,0)">progress/8.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,25)">progress/1.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,37)">progress/2.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,50)">progress/3.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,62)">progress/4.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,75)">progress/5.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,87)">progress/6.png</value>
+        <value condition="Integer.IsLess(ListItem.PercentPlayed,100)">progress/7.png</value>
+    </variable>
+
+    <variable name="Fanart">
+        <value condition="Window.IsActive(DialogSelect.xml)">general/Background.png</value>
+        <value condition="$EXP[isFavouritesSection] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="[$EXP[isEpisode] | $EXP[isVideosSection]] + !String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+        <value condition="$EXP[isMoviesSection] + !String.IsEmpty(Window(home).Property(EmbuaryBackgroundMovies))">$INFO[Window(home).Property(EmbuaryBackgroundMovies)]</value>
+        <value condition="$EXP[isTVShowsSection] + !String.IsEmpty(Window(home).Property(EmbuaryBackgroundTVShows))">$INFO[Window(home).Property(EmbuaryBackgroundTVShows)]</value>
+        <value condition="$EXP[isMusicSection] + !String.IsEmpty(Window(home).Property(EmbuaryBackgroundMusic))">$INFO[Window(home).Property(EmbuaryBackgroundMusic)]</value>
+        <value condition="$EXP[isVideosSection] + !String.IsEmpty(Window(home).Property(EmbuaryBackgroundVideos))">$INFO[Window(home).Property(EmbuaryBackgroundVideos)]</value>
+        <!-- <value>$INFO[Window(home).Property(EmbuaryBackgroundVideos)]</value> -->
+        <value>general/Background.png</value>
+    </variable>
+
+    <variable name="MainPoster">
+        <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+    </variable>
+
+    <variable name="ClearLogo">
+        <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+    </variable>
+
+    <variable name="DialogInfoTitle">
+        <value condition="$EXP[isEpisode]">$INFO[ListItem.TVShowTitle,,[CR]][LIGHT]$INFO[ListItem.Season,S,: ]$INFO[ListItem.Episode,E, ]$INFO[ListItem.Title][/LIGHT]</value>
+        <value>$INFO[ListItem.Title]</value>
+    </variable>
+
+    <!-- TV Show Level labels -->
+    <variable name="TVShowLevel1MainLabel">
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),trakt_anticipated) + $EXP[isTVShow]">$INFO[ListItem.Label]</value>
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),library_airingnext)">$INFO[ListItem.TVShowTitle]</value>
+        <value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.TVShowTitle]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
+    <variable name="TVShowLevel1SubLabel">
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),trakt_anticipated) + $EXP[isTVShow]">$INFO[ListItem.Property(Next_Aired.Day),, ]$INFO[ListItem.Property(Next_Aired.Short)]</value>
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),library_airingnext)">$INFO[ListItem.Property(Next_Aired.Day_Short),, ]$INFO[ListItem.Property(Next_Aired.Short)]$INFO[ListItem.Label, · ,]</value>
+
+        <value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Season,,x]$VAR[EpsNumber,,. ]$INFO[ListItem.Title]</value>
+
+        <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.MPAA,,  ·  ]$INFO[ListItem.Year,,]$INFO[ListItem.Property(TotalEpisodes),  ·  , episodes]</value>
+        <value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.MPAA,,  ·  ]$INFO[ListItem.Duration(mins),,min  ·  ]$INFO[ListItem.Year]</value>
+    </variable>
+
+    <variable name="TVShowMainLabel">
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),trakt_anticipated) + $EXP[isTVShow]">$INFO[ListItem.Label]</value>
+        <value condition="String.IsEqual(ListItem.Property(Param.Info),library_airingnext)">$INFO[ListItem.TVShowTitle]</value>
+        <!-- <value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Season,,x]$VAR[EpsNumber,,. ]$INFO[ListItem.Title]</value> -->
+        <value condition="String.IsEqual(ListItem.DBTYPE,episode)">$VAR[EpsNumber,,. ]$INFO[ListItem.Title]</value>
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
+    <variable name="TVShowSubLabel">
+        <value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.MPAA,,  ·  ]$INFO[ListItem.Year,,]$INFO[ListItem.Property(TotalEpisodes),  ·  , episodes]</value>
+        <value condition="String.IsEqual(ListItem.DBTYPE,season)">$INFO[ListItem.Year,,]$INFO[ListItem.Property(TotalEpisodes),  ·  , episodes]</value>
+        <value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.Duration(mins),,min  ·  ]$INFO[ListItem.Premiered]</value>
+        <value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.MPAA,,  ·  ]$INFO[ListItem.Duration(mins),,min  ·  ]$INFO[ListItem.Year]</value>
+    </variable>
+
+    <!-- Movie Level labels -->
+    <variable name="MovieMainLabel">
+        <value>$INFO[ListItem.Label]</value>
+    </variable>
+
+    <variable name="MovieSubLabel">
+        <value>$INFO[ListItem.MPAA,,  ·  ]$INFO[ListItem.Duration(mins),,min  ·  ]$INFO[ListItem.Year]</value>
+    </variable>
+</includes>

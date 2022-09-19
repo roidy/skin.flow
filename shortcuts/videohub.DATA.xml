@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+    <shortcut>
+        <label>744</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <property name="type">Videos</property>
+        <action>ActivateWindow(Videos,nfs://192.168.0.100/volume1/Media/Videos/,return)</action>
+    </shortcut>
+</shortcuts>

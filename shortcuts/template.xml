@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+    <!-- Movie Section Level 1 -->
+    <submenu include="MoviesLevel1" name="moviehub">
+        <controls>
+            <skinshortcuts insert="MoviesLevel1Items">items</skinshortcuts>
+        </controls>
+
+        <items insert="MoviesLevel1Items">
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">2</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">3</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">4</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">5</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">6</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">7</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">8</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">10</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">11</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">12</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">13</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">14</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">15</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">16</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">17</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">18</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">19</property>
+            <property name="id">20</property>
+
+            <property name="contentType" tag="property" attribute="name|contentType" />
+            <property name="level1.path" tag="property" attribute="name|list" />
+            <property name="level1.listType" tag="property" attribute="name|level1.listType" />
+            <property name="level1.sortMethod" tag="property" attribute="name|level1.sortMethod" />
+            <property name="level1.sortDirection" tag="property" attribute="name|level1.sortDirection" />
+
+            <controls>
+                <control type="group">
+                    <visible>$EXP[isMoviesSection] + Integer.IsEqual(Container(1001).Position,$PYTHON[int(id) - 1])</visible>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container($PYTHON[1001 + int(id)]).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="$PYTHON[1001 + int(id)]">
+                        <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+                        <include content="CenterList">
+                            <param name="id" value="$PYTHON[1001 + int(id)]" />
+                            <param name="hub" value="1001" />
+                            <param name="level" value="1" />
+                        </include>
+                        <top>72</top>
+                        <height>936</height>
+                        <onleft>1001</onleft>
+                        <onright condition="!String.IsEqual(ListItem.DBType,movie)">1022</onright>
+                        <onright condition="String.IsEqual(ListItem.DBType,movie)">info</onright>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
+
+                        <include content="$SKINSHORTCUTS[level1.listType]">
+                            <param name="id" value="$PYTHON[1001 + int(id)]" />
+                            <param name="MainLabel" value="$VAR[MovieMainLabel]" />
+                            <param name="SubLabel" value="$VAR[MovieSubLabel]" />
+                        </include>
+                        <content target="$SKINSHORTCUTS[contentType]" sortby="$SKINSHORTCUTS[level1.sortMethod]" sortorder="$SKINSHORTCUTS[level1.sortDirection]">$SKINSHORTCUTS[level1.path]</content>
+                    </control>
+                </control>
+            </controls>
+        </items>
+    </submenu>
+
+    <!-- TV Shows Section Level 1 -->
+    <submenu include="TVShowsLevel1" name="tvshowhub">
+        <controls>
+            <skinshortcuts insert="TVShowsLevel1Items">items</skinshortcuts>
+        </controls>
+
+        <items insert="TVShowsLevel1Items">
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">2</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">3</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">4</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">5</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">6</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">7</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">8</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">10</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">11</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">12</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">13</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">14</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">15</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">16</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">17</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">18</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">19</property>
+            <property name="id">20</property>
+
+            <property name="contentType" tag="property" attribute="name|contentType" />
+            <property name="level1.path" tag="property" attribute="name|list" />
+            <property name="level1.listType" tag="property" attribute="name|level1.listType" />
+            <property name="level1.sortMethod" tag="property" attribute="name|level1.sortMethod" />
+            <property name="level1.sortDirection" tag="property" attribute="name|level1.sortDirection" />
+
+            <controls>
+                <control type="group">
+                    <visible>$EXP[isTVShowsSection] + Integer.IsEqual(Container(2001).Position,$PYTHON[int(id) - 1])</visible>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container($PYTHON[2001 + int(id)]).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="$PYTHON[2001 + int(id)]">
+                        <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+                        <include content="CenterList">
+                            <param name="id" value="$PYTHON[2001 + int(id)]" />
+                            <param name="hub" value="2001" />
+                            <param name="level" value="1" />
+                        </include>
+                        <top>72</top>
+                        <height>936</height>
+                        <onleft>2001</onleft>
+                        <onright condition="!String.IsEqual(ListItem.DBType,episode)">2022</onright>
+                        <onright condition="String.IsEqual(ListItem.DBType,episode)">info</onright>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
+
+                        <include content="$SKINSHORTCUTS[level1.listType]">
+                            <param name="id" value="$PYTHON[2001 + int(id)]" />
+                            <param name="MainLabel" value="$VAR[TVShowLevel1MainLabel]" />
+                            <param name="SubLabel" value="$VAR[TVShowLevel1SubLabel]" />
+                        </include>
+                        <content target="$SKINSHORTCUTS[contentType]" sortby="$SKINSHORTCUTS[level1.sortMethod]" sortorder="$SKINSHORTCUTS[level1.sortDirection]">$SKINSHORTCUTS[level1.path]</content>
+                    </control>
+                </control>
+            </controls>
+        </items>
+    </submenu>
+
+    <!-- Music Section Level 1 -->
+    <submenu include="MusicLevel1" name="musichub">
+        <controls>
+            <skinshortcuts insert="MusicLevel1Items">items</skinshortcuts>
+        </controls>
+
+        <items insert="MusicLevel1Items">
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">2</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">3</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">4</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">5</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">6</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">7</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">8</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">10</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">11</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">12</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">13</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">14</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">15</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">16</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">17</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">18</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">19</property>
+            <property name="id">20</property>
+
+            <property name="contentType" tag="property" attribute="name|contentType" />
+            <property name="level1.path" tag="property" attribute="name|list" />
+            <property name="level1.listType" tag="property" attribute="name|level1.listType" />
+            <property name="level1.sortMethod" tag="property" attribute="name|level1.sortMethod" />
+            <property name="level1.sortDirection" tag="property" attribute="name|level1.sortDirection" />
+
+            <controls>
+                <control type="group">
+                    <visible>$EXP[isMusicSection] + Integer.IsEqual(Container(3001).Position,$PYTHON[int(id) - 1])</visible>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container($PYTHON[3001 + int(id)]).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="$PYTHON[3001 + int(id)]">
+                        <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+                        <include content="CenterList">
+                            <param name="id" value="$PYTHON[3001 + int(id)]" />
+                            <param name="hub" value="3001" />
+                            <param name="level" value="1" />
+                        </include>
+                        <top>72</top>
+                        <height>936</height>
+                        <onleft>3001</onleft>
+                        <onright>3022</onright>
+                        <onclick>noop</onclick>
+                        <include content="$SKINSHORTCUTS[level1.listType]">
+                            <param name="id" value="$PYTHON[3001 + int(id)]" />
+                            <param name="MainLabel" value="$VAR[MusicLevel1MainLabel]" />
+                            <param name="SubLabel" value="$VAR[MusicLevel1SubLabel]" />
+                        </include>
+                        <content target="$SKINSHORTCUTS[contentType]" sortby="$SKINSHORTCUTS[level1.sortMethod]" sortorder="$SKINSHORTCUTS[level1.sortDirection]">$SKINSHORTCUTS[level1.path]</content>
+                    </control>
+                </control>
+            </controls>
+        </items>
+    </submenu>
+
+    <!-- Videos Section Level 1 -->
+    <submenu include="VideosLevel1" name="videohub">
+        <controls>
+            <skinshortcuts insert="VideosLevel1Items">items</skinshortcuts>
+        </controls>
+
+        <items insert="VideosLevel1Items">
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[1]">1</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[2]">2</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[3]">3</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[4]">4</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[5]">5</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[6]">6</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[7]">7</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[8]">8</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[9]">9</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[10]">10</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[11]">11</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[12]">12</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[13]">13</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[14]">14</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[15]">15</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[16]">16</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[17]">17</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[18]">18</property>
+            <property name="id" tag="property" attribute="name|id" value="$NUMBER[19]">19</property>
+            <property name="id">20</property>
+
+            <property name="contentType" tag="property" attribute="name|contentType" />
+            <property name="level1.path" tag="property" attribute="name|list" />
+            <property name="level1.listType" tag="property" attribute="name|level1.listType" />
+            <property name="level1.sortMethod" tag="property" attribute="name|level1.sortMethod" />
+            <property name="level1.sortDirection" tag="property" attribute="name|level1.sortDirection" />
+
+            <controls>
+                <control type="group">
+                    <visible>$EXP[isVideosSection] + Integer.IsEqual(Container(4001).Position,$PYTHON[int(id) - 1])</visible>
+                    <left>120</left>
+                    <width>1800</width>
+                    <control type="image">
+                        <visible>Container($PYTHON[4001 + int(id)]).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="$PYTHON[4001 + int(id)]">
+                        <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+                        <include content="CenterList">
+                            <param name="id" value="$PYTHON[4001 + int(id)]" />
+                            <param name="hub" value="4001" />
+                            <param name="level" value="1" />
+                        </include>
+                        <top>72</top>
+                        <height>936</height>
+                        <onleft>4001</onleft>
+                        <onright>4022</onright>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
+
+                        <include content="$SKINSHORTCUTS[level1.listType]">
+                            <param name="id" value="$PYTHON[4001 + int(id)]" />
+                            <param name="MainLabel" value="$VAR[VideoMainLabel]" />
+                            <param name="SubLabel" value="$VAR[VideoSubLabel]" />
+                        </include>
+                        <content target="$SKINSHORTCUTS[contentType]" sortby="$SKINSHORTCUTS[level1.sortMethod]" sortorder="$SKINSHORTCUTS[level1.sortDirection]">$SKINSHORTCUTS[level1.path]</content>
+                    </control>
+                </control>
+            </controls>
+        </items>
+    </submenu>
+</template>

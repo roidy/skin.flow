@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+    <shortcut>
+        <label>31000</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31006</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>135</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://movies/genres/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>31003</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(Videos,videodb://movies/sets/,return)</action>
+    </shortcut>
+</shortcuts>

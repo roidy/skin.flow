@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcuts>
+    <shortcut>
+        <label>133</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(music,musicdb://artists/,return)</action>
+    </shortcut>
+    <shortcut>
+        <label>132</label>
+        <label2 />
+        <icon />
+        <thumb />
+        <action>ActivateWindow(music,musicdb://albums/,return)</action>
+    </shortcut>
+</shortcuts>

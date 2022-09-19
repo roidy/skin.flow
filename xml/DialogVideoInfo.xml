@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">20000</defaultcontrol>
+
+    <controls>
+
+        <control type="button" id="6" />
+        <control type="button" id="8">
+            <visible>$EXP[isMovie] | $EXP[isEpisode]</visible>
+        </control>
+        <control type="button" id="10" />
+        <control type="button" id="11">
+            <visible>!String.IsEmpty(ListItem.Trailer)</visible>
+        </control>
+
+        <control type="image">
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout" />
+            </animation>
+            <texture colordiffuse="b0080808">general/White.png</texture>
+        </control>
+
+        <control type="group">
+            <animation type="WindowOpen">
+                <effect type="fade" start="0" end="100" time="400" tween="sine" easing="inout" />
+                <effect type="slide" start="800,0" end="0,0" time="516" tween="sine" easing="inout" />
+            </animation>
+            <animation type="WindowClose">
+                <effect type="fade" start="100" end="0" time="400" tween="sine" easing="inout" />
+                <effect type="slide" start="0,0" end="800,0" time="516" tween="sine" easing="inout" />
+            </animation>
+
+            <animation effect="fade" start="100" end="0" time="200" condition="Window.IsActive(DialogSelect.xml) | Window.IsActive(FileBrowser.xml)">Conditional</animation>
+
+            <control type="group">
+
+                <control type="list" id="20000">
+                    <include content="CenterList72">
+                        <param name="id" value="20000" />
+                    </include>
+                    <left>120</left>
+                    <width>500</width>
+
+                    <onleft>back</onleft>
+                    <onright condition="String.IsEqual(Container(20000).ListItem.Property(id),cast)">50</onright>
+
+                    <itemlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="20000" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="380" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="20000" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+
+                    <content>
+                        <item>
+                            <visible>Control.IsVisible(8)</visible>
+                            <label>208</label>
+                            <onclick>SendClick(8)</onclick>
+                        </item>
+                        <item>
+                            <visible>Control.IsVisible(11)</visible>
+                            <label>20410</label>
+                            <onclick>SendClick(11)</onclick>
+                        </item>
+                        <item>
+                            <label>206</label>
+                            <property name="id">cast</property>
+                        </item>
+                        <item>
+                            <label>31001</label>
+                            <onclick>SendClick(10)</onclick>
+                        </item>
+                        <item>
+                            <label>184</label>
+                            <onclick>SendClick(6)</onclick>
+                        </item>
+                    </content>
+
+                </control>
+
+                <control type="group">
+                    <visible>String.IsEmpty(Container(20000).ListItem.Property(id))</visible>
+                    <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+                    <top>160</top>
+                    <left>400</left>
+                    <bottom>160</bottom>
+                    <right>140</right>
+
+                    <control type="image">
+                        <top>0</top>
+                        <bottom>0</bottom>
+                        <right>0</right>
+                        <aspectratio align="right">keep</aspectratio>
+                        <texture>$VAR[MainPoster]</texture>
+                    </control>
+
+                    <control type="grouplist">
+                        <left>0</left>
+                        <width>780</width>
+                        <top>0</top>
+                        <bottom>0</bottom>
+                        <orientation>vertical</orientation>
+                        <align>center</align>
+
+                        <control type="textbox">
+                            <top>0</top>
+                            <left>0</left>
+                            <right>0</right>
+                            <height>auto</height>
+                            <font>Font56</font>
+                            <textcolor>Bright</textcolor>
+                            <align>center</align>
+                            <aligny>top</aligny>
+                            <label>[B]$VAR[DialogInfoTitle][/B]</label>
+                        </control>
+
+                        <control type="label">
+                            <visible>!String.IsEmpty(ListItem.TagLine)</visible>
+                            <height>60</height>
+                            <font>Font30</font>
+                            <textcolor>Grey</textcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.TagLine]</label>
+                        </control>
+
+                        <control type="label">
+                            <visible>!String.IsEmpty(ListItem.Genre)</visible>
+                            <height>60</height>
+                            <font>Font24</font>
+                            <textcolor>Grey</textcolor>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Genre]</label>
+                        </control>
+
+                        <control type="textbox">
+                            <visible>!String.IsEmpty(ListItem.Plot)</visible>
+                            <height max="400">auto</height>
+                            <font>Font30</font>
+                            <textcolor>Grey</textcolor>
+                            <align>center</align>
+                            <label>$INFO[ListItem.Plot]</label>
+                        </control>
+                    </control>
+
+                    <include condition="$EXP[isMovie]">MovieBadgeBar</include>
+                    <include condition="$EXP[isTVShow]">TVShowBadgeBar</include>
+                    <include condition="$EXP[isEpisode]">EpisodeBadgeBar</include>
+
+                </control>
+
+                <control type="group">
+                    <visible>String.IsEqual(Container(20000).ListItem.Property(id),cast)</visible>
+                    <animation effect="fade" start="0" end="100" time="300" delay="300">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+                    <left>620</left>
+                    <width>1160</width>
+
+                    <control type="image">
+                        <top>160</top>
+                        <bottom>160</bottom>
+                        <right>0</right>
+                        <fadetime>600</fadetime>
+                        <aspectratio align="right">keep</aspectratio>
+                        <texture>$INFO[Container(50).ListItem.Art(thumb)]</texture>
+                    </control>
+
+                    <control type="image">
+                        <visible>Container(50).IsUpdating</visible>
+                        <animation effect="fade" start="0" end="100" time="100" delay="2000" reversible="false">Visible</animation>
+                        <width>120</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture>spinner.apng</texture>
+                    </control>
+
+                    <control type="list" id="50">
+                        <animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
+                        <include content="CenterList104">
+                            <param name="id" value="50" />
+                        </include>
+                        <top>72</top>
+                        <height>936</height>
+                        <onleft>20000</onleft>
+
+                        <include content="twoline">
+                            <param name="id" value="50" />
+                            <param name="MainLabel" value="$VAR[MovieMainLabel]" />
+                            <param name="SubLabel" value="$INFO[ListItem.Label2]" />
+                        </include>
+                    </control>
+
+                </control>
+
+            </control>
+
+
+        </control>
+
+    </controls>
+</window>

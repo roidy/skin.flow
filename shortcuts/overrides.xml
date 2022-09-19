@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+
+    <doNotShareMenu />
+    <widgetPlaylists>False</widgetPlaylists>
+    <widgetRename>True</widgetRename> 
+
+    <propertyfallback group="moviehub" property="contentType">Videos</propertyfallback>
+    <propertyfallback group="tvshowhub" property="contentType">Videos</propertyfallback>
+    <propertyfallback group="musichub" property="contentType">Music</propertyfallback>
+
+    <!-- Movie Hub Fallbacks Level 1-4 -->
+    <propertyfallback group="moviehub" property="level1.listType">oneline</propertyfallback>
+    <propertyfallback group="moviehub" property="level1.sortMethod">title</propertyfallback>
+    <propertyfallback group="moviehub" property="level1.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="moviehub" property="level2.listType">oneline</propertyfallback>
+    <propertyfallback group="moviehub" property="level2.sortMethod">title</propertyfallback>
+    <propertyfallback group="moviehub" property="level2.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="moviehub" property="level3.listType">oneline</propertyfallback>
+    <propertyfallback group="moviehub" property="level3.sortMethod">title</propertyfallback>
+    <propertyfallback group="moviehub" property="level3.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="moviehub" property="level4.listType">oneline</propertyfallback>
+    <propertyfallback group="moviehub" property="level4.sortMethod">title</propertyfallback>
+    <propertyfallback group="moviehub" property="level4.sortDirection">ascending</propertyfallback>
+    <!-- TV Show Hub Fallbacks Level 1-4 -->
+    <propertyfallback group="tvshowhub" property="level1.listType">oneline</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level1.sortMethod">title</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level1.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level2.listType">oneline</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level2.sortMethod">title</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level2.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level3.listType">oneline</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level3.sortMethod">title</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level3.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level4.listType">oneline</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level4.sortMethod">title</propertyfallback>
+    <propertyfallback group="tvshowhub" property="level4.sortDirection">ascending</propertyfallback>
+    <!-- Music Hub Fallbacks Level 1-4 -->
+    <propertyfallback group="musichub" property="level1.listType">oneline</propertyfallback>
+    <propertyfallback group="musichub" property="level1.sortMethod">title</propertyfallback>
+    <propertyfallback group="musichub" property="level1.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="musichub" property="level2.listType">oneline</propertyfallback>
+    <propertyfallback group="musichub" property="level2.sortMethod">title</propertyfallback>
+    <propertyfallback group="musichub" property="level2.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="musichub" property="level3.listType">oneline</propertyfallback>
+    <propertyfallback group="musichub" property="level3.sortMethod">title</propertyfallback>
+    <propertyfallback group="musichub" property="level3.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="musichub" property="level4.listType">oneline</propertyfallback>
+    <propertyfallback group="musichub" property="level4.sortMethod">title</propertyfallback>
+    <propertyfallback group="musichub" property="level4.sortDirection">ascending</propertyfallback>
+    <!-- Video Hub Fallbacks Level 1-4 -->
+    <propertyfallback group="videohub" property="level1.listType">oneline</propertyfallback>
+    <propertyfallback group="videohub" property="level1.sortMethod">title</propertyfallback>
+    <propertyfallback group="videohub" property="level1.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="videohub" property="level2.listType">oneline</propertyfallback>
+    <propertyfallback group="videohub" property="level2.sortMethod">title</propertyfallback>
+    <propertyfallback group="videohub" property="level2.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="videohub" property="level3.listType">oneline</propertyfallback>
+    <propertyfallback group="videohub" property="level3.sortMethod">title</propertyfallback>
+    <propertyfallback group="videohub" property="level3.sortDirection">ascending</propertyfallback>
+    <propertyfallback group="videohub" property="level4.listType">oneline</propertyfallback>
+    <propertyfallback group="videohub" property="level4.sortMethod">title</propertyfallback>
+    <propertyfallback group="videohub" property="level4.sortDirection">ascending</propertyfallback>
+
+    <!-- Defaults For Included Items -->
+    <!-- Movie - All Movies -->
+    <propertydefault labelID="31000" group="moviehub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31000" group="moviehub" property="level1.listType">infoline</propertydefault>
+    <propertydefault labelID="31000" group="moviehub" property="level1.sortMethod">title</propertydefault>
+    <propertydefault labelID="31000" group="moviehub" property="level1.sortDirection">ascending</propertydefault>
+    <!-- Movie - Just Added -->
+    <propertydefault labelID="31006" group="moviehub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31006" group="moviehub" property="level1.listType">oneline</propertydefault>
+    <propertydefault labelID="31006" group="moviehub" property="level1.sortMethod">dateadded</propertydefault>
+    <propertydefault labelID="31006" group="moviehub" property="level1.sortDirection">descending</propertydefault>
+    <!-- Movie - Genres -->
+    <propertydefault labelID="135" group="moviehub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level1.listType">oneline</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level1.sortMethod">label</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level1.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level2.listType">twoline</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level2.sortMethod">title</propertydefault>
+    <propertydefault labelID="135" group="moviehub" property="level2.sortDirection">ascending</propertydefault>
+    <!-- Movie - Collections -->
+    <propertydefault labelID="31003" group="moviehub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level1.listType">oneline</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level1.sortMethod">label</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level1.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level2.listType">twoline</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level2.sortMethod">year</propertydefault>
+    <propertydefault labelID="31003" group="moviehub" property="level2.sortDirection">ascending</propertydefault>
+
+    <!-- TV Shows - All TV Shows -->
+    <propertydefault labelID="31031" group="tvshowhub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level1.listType">twoline</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level1.sortMethod">title</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level1.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level2.listType">twoline</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level2.sortMethod">seasons</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level2.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level3.listType">infoline</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level3.sortMethod">episode</propertydefault>
+    <propertydefault labelID="31031" group="tvshowhub" property="level3.sortDirection">ascending</propertydefault>
+    <!-- TV Shows - Next Episodes -->
+    <propertydefault labelID="31025" group="tvshowhub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31025" group="tvshowhub" property="level1.listType">twoline</propertydefault>
+    <propertydefault labelID="31025" group="tvshowhub" property="level1.sortMethod">none</propertydefault>
+    <propertydefault labelID="31025" group="tvshowhub" property="level1.sortDirection">none</propertydefault>
+    <!-- Series - Just Added -->
+    <propertydefault labelID="31006" group="tvshowhub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="31006" group="tvshowhub" property="level1.listType">twoline</propertydefault>
+    <propertydefault labelID="31006" group="tvshowhub" property="level1.sortMethod">none</propertydefault>
+    <propertydefault labelID="31006" group="tvshowhub" property="level1.sortDirection">none</propertydefault>
+    <!-- TV Shows - Genres -->
+    <propertydefault labelID="135" group="tvshowhub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level1.listType">oneline</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level1.sortMethod">label</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level1.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level2.listType">oneline</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level2.sortMethod">title</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level2.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level3.listType">oneline</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level3.sortMethod">seasons</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level3.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level4.listType">infoline</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level4.sortMethod">episode</propertydefault>
+    <propertydefault labelID="135" group="tvshowhub" property="level4.sortDirection">ascending</propertydefault>
+    <!-- TV Shows - Studios -->
+    <propertydefault labelID="20388" group="tvshowhub" property="contentType">Videos</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level1.listType">oneline</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level1.sortMethod">label</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level1.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level2.listType">oneline</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level2.sortMethod">title</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level2.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level3.listType">oneline</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level3.sortMethod">seasons</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level3.sortDirection">ascending</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level4.listType">infoline</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level4.sortMethod">episode</propertydefault>
+    <propertydefault labelID="20388" group="tvshowhub" property="level4.sortDirection">ascending</propertydefault>
+
+    <!-- 
+        Property Controls
+    -->
+    <!-- Hub Property Settings -->
+    <property property="contentType" label="Videos">Videos</property>
+    <property property="contentType" label="Music">Music</property>
+    <property property="contentType" label="Pictures">Pictures</property>
+    <property property="contentType" label="Programs">Programs</property>
+    <propertySettings property="contentType" buttonID="421" showNone="false" title="$LOCALIZE[31013]" />
+    <!-- Level 1 Property Settings -->
+    <propertySettings toggle="level1.active" buttonID="10101" />
+    <property property="level1.listType" label="31007">oneline</property>
+    <property property="level1.listType" label="31009">twoline</property>
+    <property property="level1.listType" label="31002">infoline</property>
+    <propertySettings property="level1.listType" buttonID="10102" showNone="false" title="$LOCALIZE[31010]" />
+    <property property="level1.sortMethod" label="231"></property>
+    <property property="level1.sortMethod" label="369">title</property>
+    <property property="level1.sortMethod" label="21899">label</property>    
+    <property property="level1.sortMethod" label="551">name</property>
+    <property property="level1.sortMethod" label="590">random</property>
+    <property property="level1.sortMethod" label="570">dateadded</property>
+    <property property="level1.sortMethod" label="568">lastplayed</property>
+    <property property="level1.sortMethod" label="567">playcount</property>
+    <property property="level1.sortMethod" label="345">year</property>
+    <property property="level1.sortMethod" label="563">rating</property>
+    <property property="level1.sortMethod" label="31019">episodenumber</property>
+    <property property="level1.sortMethod" label="20373">seasons</property>
+    <property property="level1.sortMethod" label="31017">tvshowtitle</property>
+    <property property="level1.sortMethod" label="561">file</property>
+    <property property="level1.sortMethod" label="554">tracknumber</property>
+    <property property="level1.sortMethod" label="555">time</property>
+    <property property="level1.sortMethod" label="557">artist</property>
+    <property property="level1.sortMethod" label="558">album</property>
+    <property property="level1.sortMethod" label="12014">lastupdated</property>
+    <property property="level1.sortMethod" label="12012">lastused</property>
+    <property property="level1.sortMethod" label="552">date</property>
+    <propertySettings property="level1.sortMethod" buttonID="10103" showNone="false" title="$LOCALIZE[31011]" />
+    <property property="level1.sortDirection" label="231"></property>
+    <property property="level1.sortDirection" label="584">ascending</property>
+    <property property="level1.sortDirection" label="585">descending</property>
+    <propertySettings property="level1.sortDirection" buttonID="10104" showNone="false" title="$LOCALIZE[31012]" />
+    <!-- Level 2 Property Settings -->
+    <propertySettings toggle="level2.active" buttonID="10201" />
+    <property property="level2.listType" label="31007">oneline</property>
+    <property property="level2.listType" label="31009">twoline</property>
+    <property property="level2.listType" label="31002">infoline</property>
+    <propertySettings property="level2.listType" buttonID="10202" showNone="false" title="$LOCALIZE[31010]" />
+    <property property="level2.sortMethod" label="369">title</property>
+    <property property="level2.sortMethod" label="21899">label</property>    
+    <property property="level2.sortMethod" label="551">name</property>
+    <property property="level2.sortMethod" label="590">random</property>
+    <property property="level2.sortMethod" label="570">dateadded</property>
+    <property property="level2.sortMethod" label="568">lastplayed</property>
+    <property property="level2.sortMethod" label="567">playcount</property>
+    <property property="level2.sortMethod" label="345">year</property>
+    <property property="level2.sortMethod" label="563">rating</property>
+    <property property="level2.sortMethod" label="31019">episodenumber</property>
+    <property property="level2.sortMethod" label="20373">seasons</property>
+    <property property="level2.sortMethod" label="31017">tvshowtitle</property>
+    <property property="level2.sortMethod" label="561">file</property>
+    <property property="level2.sortMethod" label="554">tracknumber</property>
+    <property property="level2.sortMethod" label="555">time</property>
+    <property property="level2.sortMethod" label="557">artist</property>
+    <property property="level2.sortMethod" label="558">album</property>
+    <property property="level2.sortMethod" label="12014">lastupdated</property>
+    <property property="level2.sortMethod" label="12012">lastused</property>
+    <property property="level2.sortMethod" label="552">date</property>
+    <propertySettings property="level2.sortMethod" buttonID="10203" title="$LOCALIZE[31011]" />
+    <property property="level2.sortDirection" label="584">ascending</property>
+    <property property="level2.sortDirection" label="585">descending</property>
+    <propertySettings property="level2.sortDirection" buttonID="10204" showNone="true" title="$LOCALIZE[31012]" />
+    <!-- Level 3 Property Settings -->
+    <propertySettings toggle="level3.active" buttonID="10301" />
+    <property property="level3.listType" label="31007">oneline</property>
+    <property property="level3.listType" label="31009">twoline</property>
+    <property property="level3.listType" label="31002">infoline</property>
+    <propertySettings property="level3.listType" buttonID="10302" showNone="false" title="$LOCALIZE[31010]" />
+    <property property="level3.sortMethod" label="369">title</property>
+    <property property="level3.sortMethod" label="21899">label</property>    
+    <property property="level3.sortMethod" label="551">name</property>
+    <property property="level3.sortMethod" label="590">random</property>
+    <property property="level3.sortMethod" label="570">dateadded</property>
+    <property property="level3.sortMethod" label="568">lastplayed</property>
+    <property property="level3.sortMethod" label="567">playcount</property>
+    <property property="level3.sortMethod" label="345">year</property>
+    <property property="level3.sortMethod" label="563">rating</property>
+    <property property="level3.sortMethod" label="31019">episodenumber</property>
+    <property property="level3.sortMethod" label="20373">seasons</property>
+    <property property="level3.sortMethod" label="31017">tvshowtitle</property>
+    <property property="level3.sortMethod" label="561">file</property>
+    <property property="level3.sortMethod" label="554">tracknumber</property>
+    <property property="level3.sortMethod" label="555">time</property>
+    <property property="level3.sortMethod" label="557">artist</property>
+    <property property="level3.sortMethod" label="558">album</property>
+    <property property="level3.sortMethod" label="12014">lastupdated</property>
+    <property property="level3.sortMethod" label="12012">lastused</property>
+    <property property="level3.sortMethod" label="552">date</property>
+    <propertySettings property="level3.sortMethod" buttonID="10303" title="$LOCALIZE[31011]" />
+    <property property="level3.sortDirection" label="584">ascending</property>
+    <property property="level3.sortDirection" label="585">descending</property>
+    <propertySettings property="level3.sortDirection" buttonID="10304" showNone="true" title="$LOCALIZE[31012]" />
+    <!-- Level 4 Property Settings -->
+    <propertySettings toggle="level4.active" buttonID="10401" />
+    <property property="level4.listType" label="31007">oneline</property>
+    <property property="level4.listType" label="31009">twoline</property>
+    <property property="level4.listType" label="31002">infoline</property>
+    <propertySettings property="level4.listType" buttonID="10402" showNone="false" title="$LOCALIZE[31010]" />
+    <property property="level4.sortMethod" label="369">title</property>
+    <property property="level4.sortMethod" label="21899">label</property>    
+    <property property="level4.sortMethod" label="551">name</property>
+    <property property="level4.sortMethod" label="590">random</property>
+    <property property="level4.sortMethod" label="570">dateadded</property>
+    <property property="level4.sortMethod" label="568">lastplayed</property>
+    <property property="level4.sortMethod" label="567">playcount</property>
+    <property property="level4.sortMethod" label="345">year</property>
+    <property property="level4.sortMethod" label="563">rating</property>
+    <property property="level4.sortMethod" label="31019">episodenumber</property>
+    <property property="level4.sortMethod" label="20373">seasons</property>
+    <property property="level4.sortMethod" label="31017">tvshowtitle</property>
+    <property property="level4.sortMethod" label="561">file</property>
+    <property property="level4.sortMethod" label="554">tracknumber</property>
+    <property property="level4.sortMethod" label="555">time</property>
+    <property property="level4.sortMethod" label="557">artist</property>
+    <property property="level4.sortMethod" label="558">album</property>
+    <property property="level4.sortMethod" label="12014">lastupdated</property>
+    <property property="level4.sortMethod" label="12012">lastused</property>
+    <property property="level4.sortMethod" label="552">date</property>
+    <propertySettings property="level4.sortMethod" buttonID="10403" title="$LOCALIZE[31011]" />
+    <property property="level4.sortDirection" label="584">ascending</property>
+    <property property="level4.sortDirection" label="585">descending</property>
+    <propertySettings property="level4.sortDirection" buttonID="10404" showNone="true" title="$LOCALIZE[31012]" />
+
+    <!-- Menu Groupings -->
+    <groupings>
+        <node label="32029">
+            <content>common</content>
+        </node>
+        <node label="32030">
+            <content>video</content>
+        </node>
+        <node label="32031">
+            <content>music</content>
+        </node>
+        <node label="32020">
+            <content>picturesources</content>
+        </node>
+        <node label="32075">
+            <content>videosources</content>
+        </node>
+        <node label="32007">
+            <node label="32009">
+                <shortcut label="10001" type="32021" icon="DefaultAddonProgram.png">ActivateWindow(Programs,Addons,return)</shortcut>
+                <content>addon-program</content>
+            </node>
+            <node label="32010">
+                <shortcut label="1037" type="32014" icon="DefaultAddonVideo.png">ActivateWindow(Videos,Addons,return)</shortcut>
+                <content>addon-video</content>
+            </node>
+            <node label="32011">
+                <shortcut label="1038" type="32019" icon="DefaultAddonMusic.png">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+                <content>addon-audio</content>
+            </node>
+            <node label="32012">
+                <shortcut label="1039" type="32020" icon="DefaultAddonPicture.png">ActivateWindow(Pictures,Addons,return)</shortcut>
+                <content>addon-image</content>
+            </node>
+            <shortcut label="20244" type="32021" icon="DefaultAddonProgram.png" condition="System.Platform.Android">ActivateWindow(programs,androidapp://sources/apps/,return)</shortcut>
+        </node>
+        <node label="32006">
+            <content>favourite</content>
+        </node>
+        <node label="10004">
+            <content>settings</content>
+        </node>
+        <node label="32054">
+            <content>commands</content>
+        </node>
+    </groupings>
+
+
+    <!-- Widget Grouping -->
+
+</overrides>

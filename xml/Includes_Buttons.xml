@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+    <include name="TwoLineButton">
+        <param name="onup" value="noop" />
+        <param name="ondown" value="noop" />
+        <param name="onleft" value="noop" />
+        <param name="onright" value="noop" />
+        <definition>
+            <control type="group" id="99$PARAM[id]">
+                <width>$PARAM[width]</width>
+                <height>110</height>
+                <control type="button" id="$PARAM[id]">
+                    <textcolor>00ffffff</textcolor>
+                    <focusedcolor>00ffffff</focusedcolor>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[id])</visible>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[label]</label>
+                    </control>
+                    <control type="label">
+                        <top>38</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font24</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[data]</label>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id])</visible>
+                    <control type="image">
+                        <top>10</top>
+                        <bottom>10</bottom>
+                        <width>3</width>
+                        <texture colordiffuse="Primary">general/White.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$PARAM[label][/B]</label>
+                    </control>
+                    <control type="label">
+                        <top>38</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>font24</font>
+                        <textcolor>Grey</textcolor>
+                        <scroll>true</scroll>
+                        <label>$PARAM[data]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="OneLineButton">
+        <param name="onup" value="noop" />
+        <param name="ondown" value="noop" />
+        <param name="onleft" value="noop" />
+        <param name="onright" value="noop" />
+        <definition>
+            <control type="group" id="99$PARAM[id]">
+                <nested />
+                <width>$PARAM[width]</width>
+                <height>72</height>
+                <control type="button" id="$PARAM[id]">
+                    <textcolor>00ffffff</textcolor>
+                    <focusedcolor>00ffffff</focusedcolor>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[id]) + Control.IsVisible($PARAM[id])</visible>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[label]</label>
+                    </control>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font30</font>
+                        <align>right</align>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[rightLabel]</label>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id]) + Control.IsVisible($PARAM[id])</visible>
+                    <control type="image">
+                        <top>10</top>
+                        <bottom>10</bottom>
+                        <width>3</width>
+                        <texture colordiffuse="Primary">general/White.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$PARAM[label][/B]</label>
+                    </control>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font30</font>
+                        <align>right</align>
+                        <textcolor>Bright</textcolor>
+                        <label>$PARAM[rightLabel]</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="OneLineCheckbox">
+        <param name="onup" value="noop" />
+        <param name="ondown" value="noop" />
+        <param name="onleft" value="noop" />
+        <param name="onright" value="noop" />
+        <definition>
+            <control type="group" id="99$PARAM[id]">
+                <nested />
+                <width>$PARAM[width]</width>
+                <height>72</height>
+                <control type="button" id="$PARAM[id]">
+                    <textcolor>00ffffff</textcolor>
+                    <focusedcolor>00ffffff</focusedcolor>
+                    <onup>$PARAM[onup]</onup>
+                    <ondown>$PARAM[ondown]</ondown>
+                    <onleft>$PARAM[onleft]</onleft>
+                    <onright>$PARAM[onright]</onright>
+                </control>
+                <control type="group">
+                    <visible>!Control.HasFocus($PARAM[id]) + Control.IsVisible($PARAM[id])</visible>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font30</font>
+                        <textcolor>Grey</textcolor>
+                        <label>$PARAM[label]</label>
+                    </control>
+                    <control type="label">
+                        <visible>$PARAM[checkbox]</visible>
+                        <top>0</top>
+                        <left>20</left>
+                        <right>20</right>
+                        <height>72</height>
+                        <font>SmallIcon</font>
+                        <align>right</align>
+                        <textcolor>Grey</textcolor>
+                        <label>&#xeb85;</label>
+                    </control>
+                    <control type="label">
+                        <visible>!$PARAM[checkbox]</visible>
+                        <top>0</top>
+                        <left>20</left>
+                        <right>20</right>
+                        <height>72</height>
+                        <font>SmallIcon</font>
+                        <align>right</align>
+                        <textcolor>Grey</textcolor>
+                        <label>&#xeb7f;</label>
+                    </control>
+                </control>
+
+                <control type="group">
+                    <visible>Control.HasFocus($PARAM[id]) + Control.IsVisible($PARAM[id])</visible>
+                    <control type="image">
+                        <top>10</top>
+                        <bottom>10</bottom>
+                        <width>3</width>
+                        <texture colordiffuse="Primary">general/White.png</texture>
+                    </control>
+                    <control type="label">
+                        <top>0</top>
+                        <left>20</left>
+                        <right>0</right>
+                        <height>72</height>
+                        <font>Font34</font>
+                        <textcolor>Bright</textcolor>
+                        <label>[B]$PARAM[label][/B]</label>
+                    </control>
+                    <control type="label">
+                        <visible>$PARAM[checkbox]</visible>
+                        <top>0</top>
+                        <left>20</left>
+                        <right>20</right>
+                        <height>72</height>
+                        <font>SmallIcon</font>
+                        <align>right</align>
+                        <textcolor>Bright</textcolor>
+                        <label>&#xeb85;</label>
+                    </control>
+                    <control type="label">
+                        <visible>!$PARAM[checkbox]</visible>
+                        <top>0</top>
+                        <left>20</left>
+                        <right>20</right>
+                        <height>72</height>
+                        <font>SmallIcon</font>
+                        <align>right</align>
+                        <textcolor>Bright</textcolor>
+                        <label>&#xeb7f;</label>
+                    </control>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="DefaultButton">
+        <width>auto</width>
+        <height>72</height>
+        <textcolor>Grey</textcolor>
+        <focusedcolor>Bright</focusedcolor>
+        <disabledcolor>Dark</disabledcolor>
+        <font>Font34</font>
+        <align>left</align>
+        <aligny>top</aligny>
+        <textoffsetx>20</textoffsetx>
+        <textoffsety>9</textoffsety>
+        <texturefocus border="3" colordiffuse="Primary">controls/Button.png</texturefocus>
+    </include>
+
+    <include name="SmallIconButton">
+        <width>36</width>
+        <height>72</height>
+        <textcolor>Grey</textcolor>
+        <focusedcolor>Primary</focusedcolor>
+        <disabledcolor>Dark</disabledcolor>
+        <font>SmallIcon</font>
+        <align>center</align>
+        <aligny>center</aligny>
+    </include>
+
+</includes>

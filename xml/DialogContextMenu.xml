@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">899</defaultcontrol>
+    <onload>SetFocus(899)</onload>
+
+    <controls>
+
+        <control type="group">
+            <!-- <animation type="WindowOpen" reversible="false">
+                <effect type="fade" end="100" time="240" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="fade" start="100" end="0" time="240" />
+            </animation> -->
+
+
+            <control type="group">
+                <animation type="WindowOpen" reversible="true">
+                    <effect type="slide" start="0,0" end="-1000,0" time="480" />
+                    <effect type="fade" start="0" end="100" time="40" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" start="-1000,0" end="0,0" time="480" />
+                    <!-- <effect type="fade" start="100" end="0" time="100" /> -->
+                </animation>
+                <left>1920</left>
+                <top>0</top>
+                <height>1080</height>
+                <width>800</width>
+
+                <control type="label">
+                    <height>50</height>
+                    <top>20</top>
+                    <textcolor>ffff6030</textcolor>
+                    <font>DebugFont</font>
+                    <label>Debug:-$INFO[Container(996).ListItem(1).label]</label>
+                </control>
+
+
+                <control type="grouplist" id="996">
+                    <visible>false</visible>
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <height>1080</height>
+                    <usecontrolcoords>false</usecontrolcoords>
+                    <itemgap>0</itemgap>
+                    <align>center</align>
+
+                    <control type="button" id="1000">
+                        <include content="DefaultButton">
+                            <param name="width" value="920" />
+                        </include>
+                        <onleft>back</onleft>
+                    </control>
+                </control>
+
+                <control type="list" id="899">
+                    <include content="CenterList72">
+                        <param name="id" value="899" />
+                    </include>
+                    <left>0</left>
+                    <width>400</width>
+                    <onleft>back</onleft>
+
+                    <itemlayout width="400" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="899" />
+                        </include>
+                    </itemlayout>
+                    <focusedlayout width="400" height="72">
+                        <include content="ListItem">
+                            <param name="id" value="899" />
+                            <param name="focused" value="true" />
+                        </include>
+                    </focusedlayout>
+
+                    <content>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1001))</visible>
+                            <label>$INFO[Control.GetLabel(1001)]</label>
+                            <onclick>SendClick(1001)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1002))</visible>
+                            <label>$INFO[Control.GetLabel(1002)]</label>
+                            <onclick>SendClick(1002)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1003))</visible>
+                            <label>$INFO[Control.GetLabel(1003)]</label>
+                            <onclick>SendClick(1003)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1004))</visible>
+                            <label>$INFO[Control.GetLabel(1004)]</label>
+                            <onclick>SendClick(1004)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1005))</visible>
+                            <label>$INFO[Control.GetLabel(1005)]</label>
+                            <onclick>SendClick(1005)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1006))</visible>
+                            <label>$INFO[Control.GetLabel(1006)]</label>
+                            <onclick>SendClick(1006)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1007))</visible>
+                            <label>$INFO[Control.GetLabel(1007)]</label>
+                            <onclick>SendClick(1007)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1008))</visible>
+                            <label>$INFO[Control.GetLabel(1008)]</label>
+                            <onclick>SendClick(1008)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1009))</visible>
+                            <label>$INFO[Control.GetLabel(1009)]</label>
+                            <onclick>SendClick(1009)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1010))</visible>
+                            <label>$INFO[Control.GetLabel(1010)]</label>
+                            <onclick>SendClick(1010)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1011))</visible>
+                            <label>$INFO[Control.GetLabel(1011)]</label>
+                            <onclick>SendClick(1011)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1012))</visible>
+                            <label>$INFO[Control.GetLabel(1012)]</label>
+                            <onclick>SendClick(1012)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1013))</visible>
+                            <label>$INFO[Control.GetLabel(1013)]</label>
+                            <onclick>SendClick(1013)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1014))</visible>
+                            <label>$INFO[Control.GetLabel(1014)]</label>
+                            <onclick>SendClick(1014)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1015))</visible>
+                            <label>$INFO[Control.GetLabel(1015)]</label>
+                            <onclick>SendClick(1015)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1016))</visible>
+                            <label>$INFO[Control.GetLabel(1016)]</label>
+                            <onclick>SendClick(1016)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1017))</visible>
+                            <label>$INFO[Control.GetLabel(1017)]</label>
+                            <onclick>SendClick(1017)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1018))</visible>
+                            <label>$INFO[Control.GetLabel(1018)]</label>
+                            <onclick>SendClick(1018)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1019))</visible>
+                            <label>$INFO[Control.GetLabel(1019)]</label>
+                            <onclick>SendClick(1019)</onclick>
+                        </item>
+                        <item>
+                            <visible>!String.IsEmpty(Control.GetLabel(1020))</visible>
+                            <label>$INFO[Control.GetLabel(1020)]</label>
+                            <onclick>SendClick(1020)</onclick>
+                        </item>
+                    </content>
+                </control>
+            </control>
+
+
+            <control type="button" id="1000">
+                <include content="DefaultButton">
+                    <param name="width" value="920" />
+                </include>
+                <onleft>back</onleft>
+            </control>
+
+        </control>
+
+    </controls>
+</window>

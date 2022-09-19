@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <controls>
+        <control type="image">
+            <top>420</top>
+            <right>600</right>
+            <width>240</width>
+            <height>240</height>
+            <texture colordiffuse="Bright">spinner.apng</texture>
+        </control>
+    </controls>
+</window>
