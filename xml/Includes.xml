@@ -11,6 +11,7 @@
     <include file="Includes_ListTypes.xml" />
     <include file="Includes_Buttons.xml" />
     <include file="Includes_Background.xml" />
+    <include file="Includes_Seekbar.xml" />
 
     <include file="Section_Movies.xml" />
     <include file="Section_TVShows.xml" />

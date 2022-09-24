@@ -66,6 +66,7 @@
 
                 <!-- Level 2 -->
                 <control type="group">
+                    <visible>$EXP[MovieLevel1IsFolder]</visible>
                     <left>120</left>
                     <width>1800</width>
                     <control type="image">
@@ -79,15 +80,15 @@
                     <control type="list" id="1022">
                         <top>72</top>
                         <height>936</height>
-                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(1022).IsUpdating">Conditional</animation>
-                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(1022).IsUpdating">Conditional</animation>
+                        <!-- <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(1022).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(1022).IsUpdating">Conditional</animation> -->
                         <include content="CenterList">
                             <param name="id" value="1022" />
                             <param name="hub" value="1001" />
                             <param name="level" value="2" />
                         </include>
                         <preloaditems>2</preloaditems>
-                        <onclick>noop</onclick>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
                         <include>MovieLevel2Left</include>
                         <onright>info</onright>
 

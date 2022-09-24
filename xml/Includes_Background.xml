@@ -20,7 +20,7 @@
                 <height>1080</height>
                 <fadetime>600</fadetime>
                 <aspectratio>scale</aspectratio>
-                <texture colordiffuse="ffb0b0b0" diffuse="masks/FanartMask.png">$VAR[Fanart]</texture>
+                <texture colordiffuse="ffe0e0e0" diffuse="masks/FanartMask.png">$VAR[Fanart]</texture>
             </control>
         </definition>
     </include>
@@ -35,7 +35,7 @@
                 <height>1080</height>
                 <fadetime>$PARAM[fadetime]</fadetime>
                 <aspectratio>scale</aspectratio>
-                <texture colordiffuse="ffb0b0b0" diffuse="masks/ListMask.png">$VAR[Fanart]</texture>
+                <texture colordiffuse="ffe0e0e0" diffuse="masks/ListMask.png">$VAR[Fanart]</texture>
             </control>
         </definition>
     </include>

@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
     <controls>
+
         <control type="group">
-            <animation effect="slide" start="0,588" end="0,0" time="200">WindowOpen</animation>
-            <animation effect="slide" start="0,588" end="0,0" time="200">VisibleChange</animation>
-            <animation effect="slide" start="0,0" end="0,588" time="200">WindowClose</animation>
+            <animation effect="slide" start="0,180" end="0,0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="0,180" time="200">WindowClose</animation>
 
-            <left>200</left>
-            <right>200</right>
-            <bottom>100</bottom>
-            <height>488</height>
+            <top>900</top>
+            <height>180</height>
 
             <control type="image">
-                <texture background="true" border="32" colordiffuse="f4101010">masks/Mask488x488r32.png</texture>
+                <texture colordiffuse="e0080808">general/White.png</texture>
             </control>
+
+            <include>Seekbar</include>
+
+        </control>
+
+        <control type="group">
+            <animation effect="slide" start="0,-240" end="0,0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="0,-240" time="200">WindowClose</animation>
+
+            <left>0</left>
+            <right>0</right>
+            <top>0</top>
+            <height>240</height>
+
             <control type="image">
-                <left>40</left>
-                <top>40</top>
-                <bottom>40</bottom>
-                <width>726</width>
-                <texture background="true" diffuse="masks/Mask726x408r24.png">$VAR[VideoPlayerImage]</texture>
+                <texture colordiffuse="e0080808">general/White.png</texture>
             </control>
 
             <control type="group">
-                <left>846</left>
-                <top>60</top>
-                <bottom>60</bottom>
-                <right>40</right>
+                <left>120</left>
+                <top>40</top>
+                <bottom>44</bottom>
+                <right>120</right>
 
                 <control type="label">
                     <height>64</height>
-                    <textcolor>Grey</textcolor>
-                    <font>MenuItem</font>
+                    <textcolor>Bright</textcolor>
+                    <font>Font48</font>
                     <label>$INFO[VideoPlayer.Title]</label>
                 </control>
                 <control type="textbox">
-                    <top>82</top>
-                    <width>2540</width>
+                    <top>64</top>
                     <textcolor>Grey</textcolor>
-                    <font>WidgetLabelSub</font>
-                    <label>$INFO[VideoPlayer.Plot]</label>
-                </control>
-                <control type="label">
-                    <bottom>0</bottom>
-                    <height>32</height>
-                    <font>WidgetLabelSub</font>
-                    <textcolor>Grey</textcolor>
-                    <label>$INFO[VideoPlayer.Genre]   $VAR[VideoPlayerYear]   $VAR[VideoPlayerDuration]</label>
+                    <font>Font30</font>
+                    <label>$INFO[VideoPlayer.Plot][CR]LINEgggggg</label>
                 </control>
             </control>
         </control>

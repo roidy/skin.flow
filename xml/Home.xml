@@ -67,7 +67,7 @@
             <height>32</height>
             <font>DebugFont</font>
             <textcolor>Bright</textcolor>
-            <label>$INFO[ListItem.Trailer]</label>
+            <label>$INFO[ListItem.DBType]</label>
         </control> -->
 
     </controls>

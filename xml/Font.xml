@@ -4,6 +4,16 @@
 
         <!-- Icon fonts -->
         <font>
+            <name>PlayerIcon</name>
+            <filename>remixicon.ttf</filename>
+            <size>38</size>
+        </font>
+        <font>
+            <name>PlayerIconSmall</name>
+            <filename>remixicon.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
             <name>SmallIcon</name>
             <filename>remixicon.ttf</filename>
             <size>22</size>
@@ -64,6 +74,13 @@
             <filename>Manrope-Medium.ttf</filename>
             <size>20</size>
             <aspect>0.92</aspect>
+        </font>
+
+        <font>
+            <name>PlayerTime</name>
+            <filename>Manrope-Medium.ttf</filename>
+            <size>30</size>
+            <aspect>0.98</aspect>
         </font>
 
 

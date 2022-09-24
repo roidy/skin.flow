@@ -2,69 +2,17 @@
 <window>
     <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Seeking | Player.DisplayAfterSeek + String.IsEqual(Skin.String(HideOSD),Always) | Player.Paused  | Player.DisplayAfterSeek + !System.IdleTime(3) | Player.Paused + !System.IdleTime(3) | Player.Forwarding | Player.Rewinding | Player.IsTempo] + !Window.IsVisible(VideoOSD) + !Window.IsVisible(subtitlesearch) + !Window.IsVisible(MusicOSD)</visible>
     <controls>
+
         <control type="group">
-            <top>0</top>
+            <top>900</top>
+            <height>180</height>
+
             <control type="image">
-                <left>0</left>
-                <top>880</top>
-                <width>1920</width>
-                <height>200</height>
-                <aspectratio>scale</aspectratio>
-                <texture background="true" colordiffuse="ff000000">overlays/background_mask4.png</texture>
+                <texture colordiffuse="e0080808">general/White.png</texture>
             </control>
 
-            <control type="progress">
-                <left>135</left>
-                <top>1004</top>
-                <width>1650</width>
-                <height>12</height>
-                <texturebg colordiffuse="PrimaryOpaque">progress/progress_widget_episode_bg.png</texturebg>
-                <midtexture colordiffuse="Primary">progress/mid1.png</midtexture>
-                <info>Player.Progress</info>
-            </control>
+            <include>Seekbar</include>
 
-            <control type="group">
-                <include>PlayerProgressAnimation</include>
-                <control type="label">
-                    <visible>String.IsEqual(Player.Time(h), 0)</visible>
-                    <top>1020</top>
-                    <left>135</left>
-                    <width>auto</width>
-                    <height>35</height>
-                    <font>PlayerProgress</font>
-                    <label>$INFO[Player.Time(mm:ss)]</label>
-                </control>
-                <control type="label">
-                    <visible>!String.IsEqual(Player.Time(h), 0)</visible>
-                    <top>1020</top>
-                    <left>135</left> 
-                    <width>auto</width>
-                    <height>35</height>
-                    <font>PlayerProgress</font>
-                    <label>$INFO[Player.Time(h:mm:ss)]</label>
-                </control>
-            </control>
-
-            <control type="label">
-                <visible>String.IsEqual(Player.TimeRemaining(h), 0)</visible>
-                <top>1020</top>
-                <right>135</right>
-                <width>200</width>
-                <height>35</height>
-                <font>PlayerProgress</font>
-                <align>right</align>
-                <label>$INFO[Player.TimeRemaining(mm:ss), -]</label>
-            </control>
-            <control type="label">
-                <visible>!String.IsEqual(Player.TimeRemaining(h), 0)</visible>
-                <top>1020</top>
-                <right>135</right>
-                <width>200</width>
-                <height>35</height>
-                <font>PlayerProgress</font>
-                <align>right</align>
-                <label>$INFO[Player.TimeRemaining(h:mm:ss), -]</label>
-            </control>
         </control>
 
     </controls>

@@ -20,9 +20,11 @@
     </default>
 
     <default type="togglebutton">
+        <font>LabelFont</font>
+        <textcolor>Grey</textcolor>
+        <focusedcolor>Grey</focusedcolor>
         <aligny>center</aligny>
-        <pulseonselect>false</pulseonselect>
-    </default>
+        <pulseonselect>false</pulseonselect>    </default>
 
     <default type="textbox">
         <shadowcolor>e0060606</shadowcolor>

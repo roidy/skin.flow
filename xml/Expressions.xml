@@ -12,6 +12,30 @@
 
     <expression name="isTVShowLevel3or4">[Control.HasFocus(2023) | Control.HasFocus(2024)]</expression>
 
+
+    <expression name="MovieLevel1IsFolder">
+        [Container(1001).Position(0) + Container(1002).ListItem.IsFolder] |
+        [Container(1001).Position(1) + Container(1003).ListItem.IsFolder] |
+        [Container(1001).Position(2) + Container(1004).ListItem.IsFolder] |
+        [Container(1001).Position(3) + Container(1005).ListItem.IsFolder] |
+        [Container(1001).Position(4) + Container(1006).ListItem.IsFolder] |
+        [Container(1001).Position(5) + Container(1007).ListItem.IsFolder] |
+        [Container(1001).Position(6) + Container(1008).ListItem.IsFolder] |
+        [Container(1001).Position(7) + Container(1009).ListItem.IsFolder] |
+        [Container(1001).Position(8) + Container(1010).ListItem.IsFolder] |
+        [Container(1001).Position(9) + Container(1011).ListItem.IsFolder] |
+        [Container(1001).Position(10) + Container(1012).ListItem.IsFolder] |
+        [Container(1001).Position(11) + Container(1013).ListItem.IsFolder] |
+        [Container(1001).Position(12) + Container(1014).ListItem.IsFolder] |
+        [Container(1001).Position(13) + Container(1015).ListItem.IsFolder] |
+        [Container(1001).Position(14) + Container(1016).ListItem.IsFolder] |
+        [Container(1001).Position(15) + Container(1017).ListItem.IsFolder] |
+        [Container(1001).Position(16) + Container(1018).ListItem.IsFolder] |
+        [Container(1001).Position(17) + Container(1019).ListItem.IsFolder] |
+        [Container(1001).Position(18) + Container(1020).ListItem.IsFolder] |
+        [Container(1001).Position(19) + Container(1021).ListItem.IsFolder]
+    </expression>
+
     <expression name="TVShowNotLevel1">
         ![Control.HasFocus(2002) | Control.HasFocus(2003) | Control.HasFocus(2004) |
           Control.HasFocus(2005) | Control.HasFocus(2006) | Control.HasFocus(2007) |

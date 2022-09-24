@@ -90,8 +90,8 @@
                     <control type="list" id="2022">
                         <top>72</top>
                         <height>936</height>
-                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2022).IsUpdating">Conditional</animation>
-                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2022).IsUpdating">Conditional</animation>
+                        <!-- <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2022).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2022).IsUpdating">Conditional</animation> -->
                         <animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(2023)">Conditional</animation>
                         <include content="CenterList">
                             <param name="id" value="2022" />
@@ -99,7 +99,7 @@
                             <param name="level" value="2" />
                         </include>
                         <preloaditems>2</preloaditems>
-                        <onclick>noop</onclick>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
                         <include>TVShowLevel2Left</include>
                         <onright>2023</onright>
 
@@ -132,8 +132,8 @@
                     <control type="list" id="2023">
                         <top>72</top>
                         <height>936</height>
-                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2023).IsUpdating">Conditional</animation>
-                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2023).IsUpdating">Conditional</animation>
+                        <!-- <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2023).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2023).IsUpdating">Conditional</animation> -->
                         <animation effect="fade" start="100" end="0" time="400" condition="Control.HasFocus(2024)">Conditional</animation>
                         <include content="CenterList">
                             <param name="id" value="2023" />
@@ -141,7 +141,7 @@
                             <param name="level" value="3" />
                         </include>
                         <preloaditems>2</preloaditems>
-                        <onclick>noop</onclick>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
                         <onleft>2022</onleft>
                         <onright condition="!String.IsEqual(ListItem.DBType,episode)">2024</onright>
                         <onright condition="String.IsEqual(ListItem.DBType,episode)">info</onright>
@@ -175,15 +175,15 @@
                     <control type="list" id="2024">
                         <top>72</top>
                         <height>936</height>
-                        <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2024).IsUpdating">Conditional</animation>
-                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2024).IsUpdating">Conditional</animation>
+                        <!-- <animation effect="fade" start="0" end="100" time="200" reversible="false" condition="!Container(2024).IsUpdating">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="Container(2024).IsUpdating">Conditional</animation> -->
                         <include content="CenterList">
                             <param name="id" value="2024" />
                             <param name="hub" value="2001" />
                             <param name="level" value="4" />
                         </include>
                         <preloaditems>2</preloaditems>
-                        <onclick>noop</onclick>
+                        <onclick condition="ListItem.IsFolder">noop</onclick>
                         <onleft>2023</onleft>
                         <onright>info</onright>
 
