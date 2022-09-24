@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.flow" version="0.0.1" name="Flow" provider-name="roidy">
+<addon id="skin.flow" version="0.0.2" name="Flow" provider-name="roidy">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="0.4.0" />
